@@ -8,30 +8,38 @@
 	<li><a href="http://www.swipeclouds.com/down/www.zip">Download www - 4.7 MB</a></li>
 </ul>
 
-<table align="left" border="1" cellpadding="1" cellspacing="1"><tbody><tr><td><img height="520px" src="http://www.swipeclouds.com/img/swipeclouds.gif" width="264px"></td><td>
-			<div style="float: left">
-		
-			<table><tbody><tr><td colspan="2" style="font-size: 1.4em; font-weight: bold; padding-bottom: 12px">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Angular2 &amp; JQuery Mobile</td></tr><tr><td style="width: 263px; font-size: 1em; font-weight: bold; height: 9px; color: #000000">&nbsp; - <span style="color: #FF0000">NO</span> Ionic</td><td style="width: 263px; font-size: 1em; height: 9px; color: #000000"><b>- <span style="color: #FF0000">NO</span> Intel XDK</b></td></tr><tr><td style="width: 263px; font-size: 1em; font-weight: bold; height: 7px">&nbsp; - <span style="color: #FF0000">NO</span> Onsen UI</td><td style="width: 263px; font-size: 1em; font-weight: bold; height: 7px"><span style="color: #FF0000">-</span><span style="color: #000000"> <span style="color: #FF0000">NO</span> <b>Trigger.IO</b></span></td></tr><tr><td style="width: 263px; font-size: 1em; font-weight: bold; height: 11px">&nbsp; - <span style="color: #FF0000">NO</span> ng2-Bootstrap</td><td style="width: 263px; font-size: 1em; font-weight: bold; height: 11px">- <span style="color: #FF0000">NO</span> TopCoat</td></tr><tr><td style="width: 263px; font-size: 1em; font-weight: bold; height: 9px">&nbsp; - <span style="color: #FF0000">NO</span> Sencha Touch</td><td style="width: 263px; font-size: 1em; font-weight: bold; height: 9px">- <span style="color: #FF0000">NO</span> NativeScript</td></tr><tr><td style="width: 263px; font-size: 1em; font-weight: bold; height: 6px">&nbsp; - <span style="color: #FF0000">NO</span> Angular UI</td><td style="width: 263px; font-size: 1em; font-weight: bold; height: 6px">- <span style="color: #FF0000">NO</span> Framework 7</td></tr><tr><td colspan="2" style="padding-top: 12px; font-size: 1.4em; font-weight: bold; height: 27px">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; A Few Features Included:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td colspan="2" style="font-size: 1em; font-weight: bold; height: 27px">
-						<ul style="margin-left: -20px; margin-top: -1px">
-							<li>How to Use&nbsp;JQuery Plugins in Angular2</li>
-							<li>Cool Animated Canvas Backgrounds</li>
-							<li><b>JSONP</b> &amp; Observables for Remote Data</li>
-							<li>Pinch Clouds to Expand &amp; Contract</li>
-							<li>Angular2 Component Plays Embedded<i>&nbsp;Videos</i></li>
-							<li>Delivers Targeted Ads Based on Zip Code Radius</li>
-							<li>Allows Use of Full-Featured SASS</li>
-							<li>Angular2 ListView, Toolbar &amp; NavBar</li>
-							<li>iOS7 Frosted Panels &amp; HTML Games Like Chess</li>
-							<li>Angular2 Dialog Popup Component</li>
-							<li>BarCode Scanner, UnserData &amp; Compass Plugins</li>
-							<li>Angular2 LocalStorage Component</li>
-							<li>How to Load External Website Using Angular2</li>
-							<li>Angular2 Back Button for External Sites</li>
-							<li>Ability to Stream Video to Smart TV Sets</li>
-						</ul>
-						</td></tr></tbody></table>
-			</div>
-			</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table>
+# Angular 2 &amp; JQuery Mobile #
+- <span style="color: #FF0000">**NO**</span> **Ionic**	
+- <span style="color: #FF0000">**NO**</span> **Onsen UI**	
+- <span style="color: #FF0000">**NO**</span> **TopCoat**	
+- <span style="color: #FF0000">**NO**</span> **ng2-Bootstrap**
+- <span style="color: #FF0000">**NO**</span> **Sencha Touch**
+- <span style="color: #FF0000">**NO**</span> **NativeScript**
+- <span style="color: #FF0000">**NO**</span> **Trigger.IO**
+- <span style="color: #FF0000">**NO**</span> **Angular UI**
+- <span style="color: #FF0000">**NO**</span> **Framework 7**
+- <span style="color: #FF0000">**NO**</span> **Intel XDK**
+
+
+<img height="520px" src="http://www.swipeclouds.com/img/swipeclouds.gif" width="264px" />
+# A Few Features Included #
+
+## 
+- **How to Use JQuery Plugins in Angular2**
+- **Cool Animated Canvas Backgrounds**
+- **JSONP & Observables for Remote Data**
+- **Pinch Clouds to Expand & Contract**
+- **Angular2 Component Plays Embedded Videos**
+- **Delivers Targeted Ads Based on Zip Code Radius**
+- **Allows Use of Full-Featured SASS**
+- **Angular2 ListView, Toolbar & NavBar**
+- **iOS7 Frosted Panels & HTML Games Like Chess**
+- **Angular2 Dialog Popup Component**
+- **BarCode Scanner, UnserData & Compass Plugins**
+- **Angular2 LocalStorage Component**
+- **How to Load External Website Using Angular2**
+- **Angular2 Back Button for External Sites**
+- **Ability to Stream Video to Smart TV Sets** ##
 
 <h2><strong>Introduction</strong></h2>
 
@@ -56,49 +64,59 @@
 
 <p>Creating powerful Angular 2 Mobile Apps is fast and easy. You just run Angular CLI and then unzip the src.zip file above and copy the contents into teh src directory created by the CLI and you have all the features above ready to go with full source code---WOW! &nbsp;If you would like to download the compiled Android apk file you can find that on my SwipeClouds website at: <a href="http://www.swipeclouds.com/" target="_blank">http://www.swipeclouds.com</a></p>
 
-<h2><b>Main GUI - Pinch to Resize Cloud</b></h2>
+<h2><b>Main GUI - Pinch to Size Cloud</b></h2>
 
 <p>The main GUI is a SwipeCloud of floating images and you can swirl this cloud by swiping any of the images with your finger. Pinching the SwipeCloud with your fingers will increase and decrease the size of the SwipeCloud. This SwipeCloud is the main means of navigation for the Angular2 Mobile App and clicking on any of the images in the SwipeCloud will load a different view, which, in most cases will load the VideoComponent View for that particular group of video feeds from any tube server that allows embedding.</p>
 
-<table align="left" border="1" cellpadding="0" cellspacing="0" style="width: 100%"><tbody><tr><td style="padding-right: 12px !important"><img height="384px" src="http://www.swipeclouds.com/img/pinch.gif" width="200px"></td><td>
-			<div>Angular 2 Mobile App with a Very Different Look &amp; Feel<br>
-			with A Novel Approach to Navigation. JQuery has a lot of<br>
-			really cool, already-built CANVAS plugins like SwipeClouds,&nbsp;</div>
+<img height="384px" src="http://www.swipeclouds.com/img/pinch.gif" width="200px" />
 
-			<div>We set&nbsp;<strong>pinchZoom = true.</strong></div>
 
-			<p>function TouchDown(e) {<br>
-			&nbsp; var tg = EventToCanvasId(e), tc = (tg &amp;&amp; TagCanvas.tc[tg]), p;<br>
-			&nbsp; if(tc &amp;&amp; e.changedTouches) {<br>
-			&nbsp; &nbsp; if(e.touches.length == 1 &amp;&amp; tc.touchState == 0) {<br>
-			&nbsp; &nbsp; &nbsp; tc.touchState = 1;&nbsp; tc.BeginDrag(e);<br>
-			&nbsp; &nbsp; &nbsp; if(p = EventXY(e, tc.canvas)) {<br>
-			&nbsp; &nbsp; &nbsp; &nbsp; tc.mx = p.x;&nbsp;tc.my = p.y; &nbsp;tc.drawn = 0;<br>
-			&nbsp; &nbsp; &nbsp; }<br>
-			&nbsp; &nbsp; } else if(e.targetTouches.length == 2 &amp;&amp; tc.<strong>pinchZoom</strong>) {<br>
-			&nbsp; &nbsp; &nbsp; tc.touchState = 3;&nbsp;tc.EndDrag();&nbsp; tc.BeginPinch(e);<br>
-			&nbsp; &nbsp; } else {&nbsp;tc.EndDrag();&nbsp; tc.EndPinch();&nbsp; tc.touchState = 0; }<br>
-			&nbsp; }<br>
-			}</p>
-			</td></tr></tbody></table>
+Angular 2 Mobile App with a Very Different Look &amp; Feel<br>
+with A Novel Approach to Navigation. JQuery has a lot of<br>
+really cool, already-built CANVAS plugins like SwipeClouds<br>
+
+We set&nbsp;<strong>pinchZoom = true.</strong>
+
+    function TouchDown(e) {
+    var tg = EventToCanvasId(e), 
+    tc = (tg &amp;&amp; TagCanvas.tc[tg]), p;
+    if(tc &amp;&amp; e.changedTouches) {
+    if(e.touches.length == 1 &amp;&amp; tc.touchState == 0) {
+    tc.touchState = 1;
+    tc.BeginDrag(e);
+    if(p = EventXY(e, tc.canvas)) {
+    tc.mx = p.x;
+    tc.my = p.y; 
+    tc.drawn = 0;
+    }
+    } else if(e.targetTouches.length == 2 &amp;&amp; 
+    tc.<strong>pinchZoom</strong>) {
+    tc.touchState = 3;
+    tc.EndDrag();
+    tc.BeginPinch(e);
+    } else {&nbsp;tc.EndDrag();
+    tc.EndPinch();
+    tc.touchState = 0; }
+    }}
+
 
 <h2><b>Layouts for&nbsp;Portrait vs. Landscape</b></h2>
 
-<p>I decided that the best layout for video and the other views was to retain the Toolbar and Navbar in the Portrait Orientation and to Hide them in the Landscape Orientation. You can see this below. Notive I added a button and code to stream the selected video from your mobile phone to any smart TV set using pairing from the tube server's site.</p>
+<p>I decided that the best layout for video and the other views was to retain the Toolbar and Navbar in the Portrait Orientation and to Hide them in the Landscape Orientation. You can see this below. I added a button and code to stream the selected video from your mobile phone to any smart TV set using pairing from the tube server's site.</p>
 
-<p><img height="320px" src="http://www.swipeclouds.com/img/orientation.jpg" width="628px"></p>
+<img height="320px" src="http://www.swipeclouds.com/img/orientation.jpg" width="628px" />
 
 <p>I also used this approach for the SwipeClouds view. It made sense that if the user needs access to the Toolbar or Navbar from the Landscape Orientation the user just rotates the phone to the portrait and the controls appear.</p>
 
 <h2><strong>Install Node.js</strong></h2>
 
-<p>Let's get started to building this Angular2 Mobile App by downloading Node.js which includes npm at <a href="https://nodejs.org/en/" target="_blanl">https://nodejs.org/en/</a></p>
+<p>Let's get started to building this Angular2 Mobile App by downloading Node.js which includes npm at <a href="https://nodejs.org/en/" target="_blank">https://nodejs.org/en/</a></p>
 
 <p>At this point if you tried using npm it will most likely give you the dreaded and now famous error:<br>
 <br>
-<code><strong>npm ERR! Windows_NT 6.1.7601&nbsp;&nbsp;</strong></code><br>
+<code><strong>npm ERR! Windows_NT 6.1.7601</strong></code><br>
 <br>
-There are numberous working fixes for this error if you are behind a proxy but if you are'n't behind a proxy then trying to fix this error can make you crazy. Run the the commands below in a CMD window launched as <b>ADMINISTRATOR</b>:</p>
+There are numerous working fixes for this error if you are behind a proxy but if you are not  behind a proxy then trying to fix this error can make you crazy. Run the the commands below in a CMD window launched as <b>ADMINISTRATOR</b>:</p>
 
 <pre lang="C++">npm config delete http-proxy
 npm config delete https-proxy
@@ -112,7 +130,7 @@ npm config set strict-ssl false
 
 <h2><strong>Angular2 CLI</strong></h2>
 
-<p>I like the speed of development with Angular2 CLI but I dislike how buggy it is to work with at this time.&nbsp; I really dislike companies like Google telling me what my app should look like or what IDE I should use.&nbsp; The purpose of this article is to walk beginners through creating an Angular 2 App using CLI so let's start.</p>
+<p>I like the speed of development with Angular2 CLI but I dislike how buggy it is to work with at this time.&nbsp; I really dislike companies like Google telling me what my app should look like or what IDE I should use. The purpose of this article is to walk beginners through creating an Angular 2 App using CLI so let's start.</p>
 
 <p>Install Angular CLI which will also install Angular's "ng" command globally on your system:</p>
 
@@ -507,7 +525,8 @@ if (s) {
 
 <p>By clicking the "Setup" button on the top-left of the main screen you will slide out the frosted control panel where you can set other options for this Angular2 Mobile App.</p>
 
-<table align="left" border="1" cellpadding="1" cellspacing="1" style="width: 100% !important"><tbody><tr><td style="padding-right: 20px !important"><img height="480px" src="http://www.swipeclouds.com/img/iOS7FrostedPanel.gif" width="243px"></td><td>
+<img height="480px" src="http://www.swipeclouds.com/img/iOS7FrostedPanel.gif" width="243px" />
+
 			<p>I really like the frosted panel look and feel in iPhones<br>
 			so I added to this mobile app. To create the cool<br>
 			iOS7 Frosted Panel Look I found there are 3 "tricks"<br>
@@ -533,7 +552,6 @@ if (s) {
 			<p>This is accomplised in the app as foolows using a simple class:</p>
 
 			<p><strong>class="frosted ui-panel"</strong></p>
-			</td></tr></tbody></table>
 
 <h2><b>Cordova &amp; PhoneGap Plugins</b></h2>
 
