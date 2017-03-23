@@ -1,0 +1,105 @@
+<header data-id="header" data-position="fixed" data-role="header" class="ui-header-portrait" 
+    data-tap-toggle="false" data-transition="none" data-theme="a" style="border-bottom:4px solid #0eb7f3 !important;">
+    <app-swipecloud-header [hidden]='!show_swipecloud'></app-swipecloud-header>
+    <app-video-header [hidden]='!show_video'></app-video-header>   
+    <app-cordova-header [hidden]='!show_cordova'></app-cordova-header>
+    <app-browser-header [hidden]='!show_browser'></app-browser-header> 
+    <app-scanner-header [hidden]='!show_scanner'></app-scanner-header>
+</header>
+<div id="appContent">  
+    <router-outlet>
+    <div data-role="panel" id="panel_controls" data-display="overlay" data-position="right" class="frosted ui-panel" data-dismissible="true" data-theme="a">
+        <div id="scroller" data-iscroll='{"hScroll":false,"vScroll":true,"resizeEvents":"orientationchange","resizeWrapper":true}'>
+            <div [ngClass]='["iscroll-scroller"]'>
+                <ul id="thelist">
+                    <li>
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a" style="width: 50% !important;font-size:.7em !important;cursor: pointer !important;">
+                                <button (click)="changeDrag($event, 'on')" class="btn ui-btn ui-btn-inline btn-panel" id="dragon" data-id="dragon">+Drag</button>
+                            </div>
+                            <div class="ui-block-b" style="width: 50% !important;font-size:.7em !important;">
+                                <button (click)="changeDrag($event, 'off')" class="btn ui-btn ui-btn-inline btn-panel" id="dragoff" data-id="dragoff">-Drag</button>
+                            </div>
+                        </div>
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a" style="width: 50% !important;font-size:.7em !important;">
+                                <button (click)="changeTheme($event, 'dark')" class="btn ui-btn ui-btn-inline btn-panel" data-id="dark">Dark</button>
+                            </div>
+                            <div class="ui-block-b" style="width: 50% !important;font-size:.7em !important;">
+                                <button (click)="changeTheme($event, 'light')" class="btn ui-btn ui-btn-inline btn-panel" data-id="light">Light</button>
+                            </div>
+                        </div>
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a" style="width: 50% !important;font-size:.7em !important;">
+                                <button (click)="changeTheme($event, 'ios7dark')" class="btn ui-btn ui-btn-inline btn-panel" data-id="ios7dark">iDark</button>
+                            </div>
+                            <div class="ui-block-b" style="width: 50% !important;font-size:.7em !important;">
+                                <button (click)="changeTheme($event, 'ios7light')" class="btn ui-btn ui-btn-inline btn-panel" data-id="ios7light">iLight</button>
+                            </div>
+                        </div>
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a" style="width: 50% !important;font-size:.7em !important;">
+                                <button (click)="nextBackground($event)" class="btn ui-btn ui-btn-inline btn-panel" data-id="ddBackgrounds2">Bkgd</button>
+                            </div>
+                            <div class="ui-block-b" style="width: 50% !important;font-size:.7em !important;">
+                                <button (click)="loadBrowser($event, 'legal')" class="btn ui-btn ui-btn-inline btn-panel" data-id="browser">Legal</button>
+                            </div>
+                        </div>
+                        <!--<table style="margin: -16px 0px -4px 14px !important;padding: 0px 0px 0px 0px !important;">
+                            <tr>
+                                <td><span type="button" (click)="setSlider($event, 'zoom')" style="cursor: pointer; cursor: hand;height: 16px !important;background-color: White;color:black !important;font-size: .9em !important;">Size</span></td>
+                                <td style="width: 100% !important;"><input type="range" name="zoomSlider" id="zoomSlider" data-id="zoomSlider" value="90" min="30" max="150" step="5"></td>
+                            </tr>
+                            <tr>
+                                <td><span type="button" (click)="setSlider($event, 'maxspeed')" style="cursor: pointer; cursor: hand;height: 16px !important;background-color: White;color:black !important;font-size: .9em !important;">Speed</span></td>
+                                <td style="width: 100% !important;"><input type="range" name="speedSlider" id="speedSlider" data-id="speedSlider" value="2" min="1" max="8" step="1"></td>
+                            </tr>
+                        </table>-->
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a" style="width: 50% !important;font-size:.7em !important;">
+                                <button (click)="changeShape($event, 'sphere')" class="btn ui-btn ui-btn-inline btn-panel" data-id="sphere">sphere</button>
+                            </div>
+                            <div class="ui-block-b" style="width: 50% !important;font-size:.7em !important;">
+                                <button (click)="changeShape($event, 'dblhelix')" class="btn ui-btn ui-btn-inline btn-panel" data-id="sphere">helix</button>
+                            </div>
+                        </div>
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a" style="width: 50% !important;font-size:.7em !important;">
+                                <button (click)="changeShape($event, 'vring')" class="btn ui-btn ui-btn-inline btn-panel">hring</button>
+                            </div>
+                            <div class="ui-block-b" style="width: 50% !important;font-size:.7em !important;">
+                                <button (click)="changeShape($event, 'hring')" class="btn ui-btn ui-btn-inline btn-panel">vring</button>
+                            </div>
+                        </div>
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a" style="width: 50% !important;font-size:.7em !important;">
+                                <button (click)="changeShape($event, 'vcylinder')" class="btn ui-btn ui-btn-inline btn-panel">hcyl</button>
+                            </div>
+                            <div class="ui-block-b" style="width: 50% !important;font-size:.7em !important;">
+                                <button (click)="changeShape($event, 'hcylinder')" class="btn ui-btn ui-btn-inline btn-panel">vcyl</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li style="padding-bottom:122px;"><button (click)="closePanel($event, 'close')" class="btn ui-btn ui-btn-inline btn-panel" data-id="close" data-icon="delete">Close</button></li>
+                    <div style="height:140px;"></div>
+                </ul>
+            </div>
+        </div>
+    </div>        
+    </router-outlet> 
+</div>
+<footer data-id="footer" data-position="fixed" data-role="footer" data-tap-toggle="false" class="showit" 
+    data-transition="none" data-theme="a" style="padding-top: 8px !important;">
+    <app-swipecloud-navbar [hidden]='!show_swipecloud'></app-swipecloud-navbar>
+    <app-video-navbar [hidden]='!show_video'></app-video-navbar>
+    <app-cordova-navbar [hidden]='!show_cordova'></app-cordova-navbar>
+    <app-browser-navbar [hidden]='!show_browser'></app-browser-navbar> 
+    <app-scanner-navbar [hidden]='!show_scanner'></app-scanner-navbar>
+</footer>
+
+
+
+
+
+
+

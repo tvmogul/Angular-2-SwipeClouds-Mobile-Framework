@@ -1,0 +1,13 @@
+<div id="Div2" data-role="content" style="overflow: hidden;" class="ui-content" role="main">
+    <div class="inner_panel center-wrapper" data-role="controlgroup">
+        <div style="text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 0px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;padding-bottom: 0px !important;padding-top:12px;">
+            <h2>Barcode Scanner</h2>
+        </div>
+        <div style="padding-top:0px !important;width: 85% !important;">
+            <div id="scan_format"></div><br />
+  <div id="scan_result" class="wrap_form_text" style="min-height:50px !important;border: 1px solid #ff0000"></div><br />
+        </div>
+        <a (click)="loadScan($event, 'scan')" href="#" class="btnscan">Scan</a>
+        <a (click)="loadLookupScan($event, 'lookupscan')" href="#" class="btnlookupscan">Lookup</a> 	
+    </div>
+</div>

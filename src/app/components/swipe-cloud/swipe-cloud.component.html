@@ -1,0 +1,51 @@
+<div id="swipeCanvasContainer" style="display: block !important;">
+    <canvas id="swipeCanvas" [attr.width]='_wcloud' [attr.height]='_hcloud' 
+    class="zcanvas_bg_white" style="display: block !important;overflow: hidden !important;background-image: none; cursor: grab;"></canvas>
+</div>
+
+<div id="dronesCloud" style="display: none !important;" [hidden]="!visible">
+    <a type="button" (click)="CallRoute($event, 'dtv_new')" href="#" role="dtv_new" title="New Drones"><img src="./assets/img_drones/1_newdrones.png" alt="Icon 01" /></a>
+    <a type="button" (click)="CallRoute($event, 'dtv_flyingbikes')" title="Hover Boards"><img src="./assets/img_drones/1_flyingbikes.png" alt="Icon 01" /></a>
+    <a type="button" (click)="CallRoute($event, 'ufos_all')" title="Aliens UFOs"><img src="./assets/img_drones/1_ufos.png" alt="Icon 01" /></a>
+    <a type="button" (click)="CallRoute($event, 'dtv_laws')" title="Drone Laws"><img src="./assets/img_drones/1_legal.png" alt="Icon 01" /></a>
+    <a type="button" (click)="CallRoute($event, 'dtv_build')" title="Building Drones"><img src="./assets/img_drones/1_drill.png" alt="Icon 01" /></a>
+    <a type="button" (click)="CallRoute($event, 'dtv_antigravity')" title="Anti Gravity Drones"><img src="./assets/img_drones/1_antigravity.png" alt="Icon 01" /></a>
+    <a type="button" (click)="CallRoute($event, 'dtv_code')" title="Code APIs SDKs"><img src="./assets/img_drones/1_code.png" alt="Icon 01" /></a>
+    <a type="button" (click)="CallRoute($event, 'dtv_insects')" title="Insect Drones"><img src="./assets/img_drones/1_insects.png" alt="Icon 01" /></a>
+    <a type="button" (click)="CallRoute($event, 'dtv_military')" href="#" role="dtv_military" title="Drone Murders"><img src="./assets/img_drones/1_militarydrones.png" alt="Icon 01" /></a>
+    <a type="button" (click)="CallRoute($event, 'dtv_racing')" href="#" role="dtv_racing" title="FPV Racing"><img src="./assets/img_drones/1_fpv.png" alt="Icon 01" /></a>
+    <a type="button" (click)="CallRoute($event, 'movies')" href="#" role="movies" title="SciFi Horror Movies"><img src="./assets/img_drones/1_movies.png" alt="Icon 01" /></a>
+    <a type="button" (click)="CallRoute($event, 'cordova_tools')" href="#" role="movies" title="User Info, Scanner and Compass"><img src="./assets/img_drones/1_cordova.png" alt="Icon 01" /></a>
+    <a type="button" (click)="loadBrowser($event, 'chess')" href="#" role="movies" title="User Info, Scanner and Compass"><img src="./assets/img_drones/1_chess.png" alt="Icon 01" /></a>
+    <a type="button" (click)="openDialogBox('license')" href="#" data-id="demo" role="demo" title="Dialog Demo"><img src="./assets/img_drones/1_dialog.png" alt="Icon 01" /></a>
+</div>
+
+<div id="eduCloud" style="display: none !important;" [hidden]="!visible">
+    <a type="button" (click)="CallRoute($event, 'edu_survival')" title="Survival Guide"><img src="./assets/img_edu/1_survival.png" alt="Icon 01" /></a>
+    <a type="button" (click)="CallRoute($event, 'creatures')" title="Real Creatures"><img src="./assets/img_edu/1_creatures.png" alt="Icon 01" /></a>
+    <a type="button" (click)="CallRoute($event, 'edu_math')" title="Learn Math"><img src="./assets/img_edu/1_math.png" alt="Icon 01" /></a>
+    <a type="button" (click)="CallRoute($event, 'dtv_antigravity')" title="Anti Gravity"><img src="./assets/img_edu/1_anti-gravity.png" alt="Icon 01" /></a>
+    <a type="button" (click)="CallRoute($event, 'edu_physics')" title="Physics Lectures"><img src="./assets/img_edu/1_physics.png" alt="Icon 01" /></a>
+    <a type="button" (click)="CallRoute($event, 'edu_faq')" title="General Questions"><img src="./assets/img_edu/1_faq.png" alt="Icon 01" /></a>
+    <a type="button" (click)="CallRoute($event, 'edu_science')" title="Science"><img src="./assets/img_edu/1_science.png" alt="Icon 01" /></a>
+    <a type="button" (click)="CallRoute($event, 'edu_biology')" title="Biology"><img src="./assets/img_edu/1_biology.png" alt="Icon 01" /></a>
+    <a type="button" (click)="CallRoute($event, 'edu_sat')" title="SAT"><img src="./assets/img_edu/1_sat.png" alt="Icon 01" /></a>
+    <a type="button" (click)="CallRoute($event, 'edu_chemistry')" title="Chemistry"><img src="./assets/img_edu/1_chemistry.png" alt="Icon 01" /></a>
+    <a type="button" (click)="CallRoute($event, 'edu_finance')" title="Finance"><img src="./assets/img_edu/1_money.png" alt="Icon 01" /></a>
+    <a type="button" (click)="CallRoute($event, 'edu_marketing')" title="Marketing"><img src="./assets/img_edu/1_marketing.png" alt="Icon 01" /></a>
+    <a type="button" (click)="CallRoute($event, 'edu_howto')" title="How To"><img src="./assets/img_edu/1_howto.png" alt="Icon 01" /></a>
+    <a type="button" (click)="CallRoute($event, 'edu_deepweb')" title="Deep Web"><img src="./assets/img_edu/1_deepweb.png" alt="Icon 01" /></a>
+</div>
+
+<div id="sportsCloud" style="display: none !important;" [hidden]="!visible">
+    <a type="button" (click)="CallRoute($event, 'sports_football')" title="Football"><img src="./assets/img_sports/1_football.png" alt="Icon 01" /></a>
+    <a type="button" (click)="CallRoute($event, 'sports_bicycling')" title="Bicycling"><img src="./assets/img_sports/1_bicycling.png" alt="Icon 01" /></a>
+    <a type="button" (click)="CallRoute($event, 'sports_basketball')" title="Basketball"><img src="./assets/img_sports/1_basketball.png" alt="Icon 01" /></a>
+    <a type="button" (click)="CallRoute($event, 'sports_billards')" title="Billiards"><img src="./assets/img_sports/1_billiards.png" alt="Icon 01" /></a>
+    <a type="button" (click)="CallRoute($event, 'sports_camping')" title="Camping"><img src="./assets/img_sports/1_camping.png" alt="Icon 01" /></a>
+    <a type="button" (click)="CallRoute($event, 'sports_chess')" title="Chess"><img src="./assets/img_sports/1_chess.png" alt="Icon 01" /></a>
+    <a type="button" (click)="CallRoute($event, 'sports_golf')" title="Golf"><img src="./assets/img_sports/1_golf.png" alt="Icon 01" /></a>
+    <a type="button" (click)="CallRoute($event, 'sports_baseball')" title="Baseball"><img src="./assets/img_sports/1_baseball.png" alt="Icon 01" /></a>
+    <a type="button" (click)="CallRoute($event, 'sports_tennis')" title="Tennis"><img src="./assets/img_sports/1_tennis.png" alt="Icon 01" /></a>
+</div>
+<div dialogAnchor></div>

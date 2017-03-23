@@ -1,0 +1,42 @@
+<div id="maincontent" data-id="content" data-role="content" class="disable_text_highlighting">
+    <div id="zebra">
+        <div style="margin: 12px 12px 12px 12px !important;font-family: 'Oswald', sans-serif;font-size: 1.6em;">
+        Below Are Several Bloody Cuctom Cordova Plugins That Provide Additional Functionality.
+        </div>
+    </div>
+    <div id="zvideowrapper" data-iscroll="{
+            'hScroll': false,
+            'vScroll': true,
+            'resizeEvents': 'orientationchange',
+            'resizeWrapper': true,
+            'mouseWheel': true,
+            'click': true,
+            'interactiveScrollbars': true,
+            'shrinkScrollbars': 'scale'}">
+        <div id="divrss" [ngClass]="divrss">
+            <ul data-theme="a" id="feeditems-ul" [ngClass]="['feeditems-ul']" 
+                data-role="listview" data-inset="false" data-filter="false" 
+                style="padding-top: 10px !important;padding-bottom: 200px !important;">
+
+                <li *ngFor="let tool of generateArray(cordovatools)" data-icon="false" data-role="listview">
+                    <div [ngClass]="['duration-cover']" (click)="CordovaPlugin($event, tool.linkValue)">
+                        <img [ngClass]="['rounded-img']" src="./assets/img/{{tool.image}}" />
+                    </div>
+                    <h3 [ngClass]="['ellipsis']">{{tool.title}}</h3>
+                    <p [ngClass]="['ellipsis2']">{{tool.description}}</p>
+                </li>
+
+            </ul>
+        </div>
+    
+    </div>
+
+
+</div>
+
+
+
+
+         
+
+

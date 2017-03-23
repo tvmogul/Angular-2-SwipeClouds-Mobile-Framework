@@ -1,0 +1,44 @@
+<div id="maincontent" data-id="content" data-role="content">
+    <div id="zebra">
+        <iframe id="yt_player" name="yt_player" [src]='page' 
+        [ngStyle]='["width: 100%", "height: 100%"]'
+        marginheight="0" frameborder="0" allowfullscreen></iframe>
+        <!--<div id="videodetails" class="videodetails_hide ui-li-duration"></div>-->
+    </div>
+    <div id="zvideowrapper" data-iscroll="{
+            'hScroll': false,
+            'vScroll': true,
+            'resizeEvents': 'orientationchange',
+            'resizeWrapper': true,
+            'mouseWheel': true,
+            'click': true,
+            'interactiveScrollbars': true,
+            'shrinkScrollbars': 'scale'}">
+        <div id="divrss" [ngClass]='["divrss"]' [ngStyle]='["padding-bottom: 1200px !important;"]'>
+            <ul data-theme="a" id="feeditems-ul" [ngClass]="['feeditems-ul']" 
+                data-role="listview" data-inset="false" data-filter="false"
+                [ngStyle] = '["padding-bottom: 100px !important"]'>
+                <!--Checks first if feeds has value and if feeds doesn't have a value, 
+                it doesn't access length of undefined because first condition failed.-->
+                <div *ngIf="feeds?.length < 1">
+                    <h3>"Searching..."</h3>
+                </div>
+
+                <li *ngFor="let feed of feeds;let i = index" data-icon="false" 
+                    data-role="listview" [class.active]="i == selectedRow">
+                    <div [ngClass]="['duration-cover']" (click)="clicked($event, feed, i)">
+                        <div [ngClass]="['duration-left']">{{feed.duration}}</div>
+                        <img [ngClass]="['rounded-img']" src="{{feed.image}}" />
+                    </div>
+                    <h3 [ngClass]="['ellipsis']">{{feed.title}}</h3>
+                    <p [ngClass]="['ellipsis2']">{{feed.shortDescription}}</p>
+                </li>
+                <!--<li *ngFor="let tab of generateArray(doc)">
+                    <a href="#">{{tab.fb_id}}</a>
+                </li>-->
+            </ul>
+            <div style="width: 100% !important;height: 100px !important;">&nbsp;<div>
+        </div>
+    </div>
+</div>
+

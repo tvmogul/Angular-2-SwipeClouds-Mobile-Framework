@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>FirstApp</title>
+  <script>document.write('<base href="' + document.location + '" />');</script>
+  <meta name="viewport" content="user-scalable=yes, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
+  <meta http-equiv="Content-Security-Policy" content="default-src * gap://ready file:; style-src 'self' 'unsafe-inline' *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; img-src * data: 'unsafe-inline'"> 
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!--To make Angular 2 apps work in Android 4.1.x and
+  above stock browsers we link to Polyfills as follows:-->
+  <!--<script src="../node_modules/core-js/client/shim.js"></script>-->
+  <script src="./assets/scripts/shim.js"></script>
+
+  <!-- jQuery Related Stuff -->
+  <link href="./assets/styles/jquery.mobile-1.4.2.min.css" rel="stylesheet" type="text/css" />
+  <link href="./assets/styles/jquery.mobile.icons-1.4.5.css" rel="stylesheet" type="text/css" />
+  <link href="./assets/styles/jqm-icon-pack-fa.css" rel="stylesheet" type="text/css" />
+  <link href="./assets/js_iscroll/jquery.mobile.iscrollview.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <link href="https://fonts.googleapis.com/css?family=BenchNine:700|Oswald:300|Pavanam|Roboto+Condensed|Yanone+Kaffeesatz" rel="stylesheet">
+
+  <!--font-family: 'Oswald', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-family: 'Pavanam', sans-serif;
+  font-family: 'BenchNine', sans-serif;-->
+
+  <!--NOTE: WHEN YOU RUN THIS APP FOR TESTING A MESSAGE WILL POPUP AND
+  YOU NEED TO HIT THE CANCEL BUTTON IN THAT MESSAGE AND THE APP WILL RUN -->
+  <script src="./assets/cordova.js" type="text/javascript"></script>
+  <script src="./assets/scripts/index.js" type="text/javascript"></script>
+
+  <script src="./assets/scripts/jquery-1.11.3.min.js"></script>
+  <script src="./assets/scripts/jquery.mobile-1.4.5.min.js"></script>
+  <script src="./assets/js_iscroll/iscroll.js" type="text/javascript"></script>
+  <script src="./assets/js_iscroll/jquery.mobile.iscrollview.js" type="text/javascript"></script>
+  <script src="./assets/scripts/tagcanvas.js"></script>
+   
+  <!--<script src='scripts/hammer.min.js' type='text/javascript'></script>-->
+  <!--<script src='assets/scripts/jquery.jqdock.js' type='text/javascript'></script>-->
+  <!--var json = require('./assets/data/nbclouds.js');-->
+
+  <!--ng build --prod --aot --base-href /$ROOT/Angular/first-app/www/-->
+  <link id="link_swipeclouds" href="" rel="stylesheet" type="text/css" />
+</head>
+<body style="overflow: hidden !important;">
+    <!--<div data-role="page" id="mainPage" style="-webkit-overflow-scrolling: hidden !important;text-align: center;background-color: transparent !important;border: 0px none transparent;overflow: hidden !important;">-->
+        <app-root>Loading...</app-root>
+    <!--</div>-->
+</body>
+</html>

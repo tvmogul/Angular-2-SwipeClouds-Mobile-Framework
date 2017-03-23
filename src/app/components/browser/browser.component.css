@@ -1,0 +1,23 @@
+/* Swipe works with mouse as well but often causes text selection. */
+body * {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.demo-iframe-holder {
+  position: fixed; 
+  right: 0; 
+  bottom: 0; 
+  left: 0;
+  top: 0;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+}
+
+.demo-iframe-holder iframe {
+  height: 100%;
+  width: 100%;
+}

@@ -1,0 +1,344 @@
+﻿<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>FirstApp</title>
+  <script>document.write('<base href="' + document.location + '" />');</script>
+  <meta name="viewport" content="user-scalable=yes, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
+  <meta http-equiv="Content-Security-Policy" content="default-src * gap://ready file:; style-src 'self' 'unsafe-inline' *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; img-src * data: 'unsafe-inline'"> 
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!--To make Angular 2 apps work in Android 4.1.x and
+  above stock browsers we link to Polyfills as follows:-->
+  <!--<script src="../node_modules/core-js/client/shim.js"></script>-->
+  <script src="./assets/scripts/shim.js"></script>
+
+  <!-- jQuery Related Stuff -->
+  <link href="./assets/styles/jquery.mobile-1.4.2.min.css" rel="stylesheet" type="text/css" />
+  <link href="./assets/styles/jquery.mobile.icons-1.4.5.css" rel="stylesheet" type="text/css" />
+  <link href="./assets/styles/jqm-icon-pack-fa.css" rel="stylesheet" type="text/css" />
+  <link href="./assets/js_iscroll/jquery.mobile.iscrollview.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="https://fonts.googleapis.com/css?family=BenchNine:700|Oswald:300|Pavanam|Roboto+Condensed|Yanone+Kaffeesatz" rel="stylesheet">
+
+  <script src="./cordova.js" type="text/javascript"></script>
+  <script src="./index.js" type="text/javascript"></script>
+
+  <script src="./assets/scripts/jquery-1.11.3.min.js"></script>
+  <script src="./assets/scripts/jquery.mobile-1.4.5.min.js"></script>
+  <script src="./assets/js_iscroll/iscroll.js" type="text/javascript"></script>
+  <script src="./assets/js_iscroll/jquery.mobile.iscrollview.js" type="text/javascript"></script>
+  <script src="./assets/scripts/tagcanvas.min.js"></script>
+
+<script type="text/javascript">
+
+    /* Use this for high compatibility (iDevice + Android)*/
+    document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+    document.addEventListener('DOMContentLoaded', loaded, false);
+    // document.addEventListener("deviceready", function (e) { }, "false");
+    document.addEventListener('deviceready', function () {
+        // StatusBar.overlaysWebView(false);
+        // StatusBar.backgroundColorByName('black');
+        var name = "User Data";
+        //cordova.exec(showUserDataSuccess, showUserDataFailure, "UserDataPlugin", "showUserDataString", [name]);
+        cordova.exec(showUserDataSuccess, showUserDataFailure, "UserDataPlugin", "showUserDataListView", [name]);
+    }, false);
+
+    $(document).bind("mobileinit", function () {
+        jQuery.support.cors = true;
+        jQuery.mobile.allowCrossDomainPages = true;
+        jQuery.mobile.phonegapNavigationEnabled = true;
+        jQuery.mobile.defaultDialogTransition = "slide";
+    });
+
+    $(document).delegate('.ui-listview a img', 'click', function () {
+        var path = $(this).parent().attr("data-param");
+        var category = $(this).parent().attr("href");
+        // launchItem(path);
+        // alert("category: " + category);
+        // alert("path: " + path);
+        if (path == "data") {
+            //alert("Eureka!");
+            var name = "User Data";
+            //cordova.exec(showUserDataSuccess, showUserDataFailure, "UserDataPlugin", "showUserDataString", [name]);
+            cordova.exec(showUserDataSuccess, showUserDataFailure, "UserDataPlugin", "showUserDataListView", [name]);
+        }
+        else if (path == "scanner") {
+            window.location = "./qrurl.html#mainPage";
+        }
+        else if (path == "compass") {
+            var name = "Compass";
+            cordova.exec(showCompassSuccess, showCompassFailure, "CompassPlugin", "showCompass", [name]);
+        }
+        else if (path == "floatcompass") {
+            var name = "float";
+            cordova.exec(showCompassSuccess, showCompassFailure, "CompassPlugin", "floatCompass", [name]);
+        }
+    });
+
+    function showUserDataSuccess(data) {
+        //alert("OK: " + data);
+    }
+
+    function showUserDataFailure(data) {
+        //alert("FAIL: " + data);
+    }
+    
+    
+    function showCompassSuccess(data) {
+        //alert("Compass success: " + data);
+    }
+
+    function showCompassFailure(data) {
+        //alert("Compass Failure: " + data);
+    }
+
+</script>
+
+
+<style type="text/css">
+    
+html, body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow: hidden !important;
+} 
+    
+html { 
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0px;
+}
+              
+body {
+    font-family: "Calibri", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 1.1em;
+    line-height: 1.1em;
+    font-weight: normal; 
+    letter-spacing: -0.03em; 
+    background-color: #F2F2F2 !important;
+    background-repeat: no-repeat;
+    text-decoration: none;
+}
+         
+.ui-page, .ui-page-fullscreen{
+    margin: 0;
+    padding: 0;
+    overflow: hidden !important;
+}
+
+.ui-content {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    outline: 0 !important;
+    left: 0 !important;
+} 
+
+.ui-page, .ui-page-fullscreen {
+    margin: 0;
+    padding: 0;
+    overflow: hidden !important;
+}
+  
+.ui-li-aside{
+    content:'';
+    width:50px !important;
+    padding-top:-2px !important;
+    padding-right:8px !important;    
+    vertical-align:top;
+    font-size:.8em;
+    font-family: "Calibri", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    font-weight: normal;
+    font-style: normal;    
+    position:absolute;
+    float:right;
+    right:8px;
+    top:-2px;
+    color:#ff0000;
+    display: none !important;
+}  
+
+.imgtime {
+    z-index:99999;
+    position:absolute;
+    bottom:26px;
+    left:58px;
+    float:left;   
+    font: Helvetica, Arial, sans-serif;
+    font-size:.8em;
+    text-decoration:none;
+    font-variant:normal;
+    font-style:normal;
+    font-weight:normal;
+    color:White;
+    display: none !important;       
+}
+
+/* rounded image styles youtube-videogallery-img */   
+.rounded-img, .ui-li-icon {
+    float: left;
+    top: 1px;
+    padding: 0px 0px 0px 0px;
+    margin-top: 8px;
+    margin-left: 10px;
+    width: 65px !important;
+    height: 60px !important;
+    display: inline-block;
+    border: none 0px transparent !important;     /* #9CAAC1; */
+    overflow: hidden; 
+    background-color: transparent !important;
+}
+
+.rounded-img:hover, img.ui-li-icon:hover {
+    float: left;
+    top: 1px;
+    padding: 0px 0px 0px 0px;
+    margin-left: 18px;
+    width: 65px !important;
+    height: 60px !important;
+    display: inline-block;
+    border: none 0px transparent !important;    /* #9CAAC1; */
+    overflow: hidden;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, .8);
+    -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, .8);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, .8);
+    border:1px solid #ff0000 !important;
+}
+    
+.ellipsis {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 60%;
+    margin: 0px 0px 0px 98px;
+    padding: 0px 0px 0px 0px;
+    font-family: "Calibri", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    -webkit-font-smoothing: antialiased; 
+    font-size: 1.6em;
+    line-height: 1.6em;
+    font-weight: normal;
+    font-style: normal;
+    display: list-item;
+    white-space: normal;
+    background-color: transparent !important;
+}
+    
+.ellipsis2 {
+    position: absolute;
+    top: 38px;
+    left: 0px;
+    width: 60%;
+    height: 70px !important;
+    margin: 0px 0px 0px 98px;
+    padding: 0px 0px 0px 0px;   
+    font-family: "Calibri", Arial, Helvetica, sans-serif;   
+    font-size: 1.1em;
+    font-weight: normal;
+    font-style: normal;
+    display: list-item;
+    text-overflow: ellipsis;
+    overflow: ellipsis;
+    white-space: normal;  
+    text-decoration: inherit;
+    -webkit-font-smoothing: antialiased;
+    vertical-align: top;
+    line-height: 1.0em;
+    text-align: left;
+    background-color: transparent !important;
+}
+
+#zvideowrapper ul li, #zvideowrapper li {
+    height: 94px !important;
+    z-index:1 !important;
+    border-bottom: 1px solid #464954;
+    border-top: 1px solid #464954;
+
+}
+
+.center-wrapper {
+    text-align: center;
+}
+.center-wrapper * {
+    margin: 0px auto 0px auto;
+}     
+    
+.ui-li-divider {
+    line-height:60px !important;
+    text-decoration: none;
+    white-space:nowrap;
+}
+.ui-li-divider img {
+    max-width: 300px;
+    max-height: 60px;
+    padding-top: 0px!important;
+}
+
+.feed_wrapper li {
+    float: left;
+    padding-right: 40px !important;
+    width: 100% !important;
+}
+
+/* DO NOT REMOVE THIS !!! */
+.iscroll-scroller {
+    min-width: 100% !important;
+}   
+#zvideowrapper {
+    padding-top: 40px !important;
+}      
+</style>
+<body>
+    <div data-role="page" id="mainPage" style="text-align: center; margin: 0 auto;">
+
+        <div id="zvideowrapper" data-iscroll="{
+                'hScroll':false,
+                'vScroll':true,
+                'resizeEvents':'orientationchange',
+                'resizeWrapper':true, 
+                'mouseWheel': true, 
+                'click': true, 
+                'interactiveScrollbars': true, 
+                'shrinkScrollbars': 'scale'
+                }" data-id="content" data-role="content" style="padding-bottom:20px !important;">
+                <ul data-role="listview" data-inset="true" class="ui-listview" data-theme="a" style="margin-top:20px;">
+
+                <li data-icon="false" data-role="zlistview" style="width:100%;display:block;">
+                    <a href="#data" class="rsslistfetch-link" data-param="data">
+                        <img class="rounded-img" src="../img/1_info.png">
+                            <div class="ellipsis"> User Data Plugin </div>
+                            <div class="ellipsis2">Grabs User Data</div>
+                                <div class="ui-li-aside">02:30:00</div>
+                    </a>
+                </li>
+                <li data-icon="false" data-role="zlistview" style="width:100%;display:block;">
+                    <a href="#" class="rsslistfetch-link" data-param="scanner">
+                        <img class="rounded-img" src="../img/1_scan.png">
+                            <div class="ellipsis"> Scanner Plugin</div>
+                            <div class="ellipsis2">Barcode Scanner</div>
+                             <div class="ui-li-aside">02:30:00</div>
+                    </a>
+                </li>
+                
+                <li data-icon="false" data-role="zlistview" style="width:100%;display:block;">
+                    <a href="#" class="rsslistfetch-link" data-param="compass">
+                        <img class="rounded-img" src="../img/1_compass.png">
+                            <div class="ellipsis"> Compass Plugin </div>
+                            <div class="ellipsis2">Different Compasses</div>
+                             <div class="ui-li-aside">02:30:00</div>
+                    </a>
+                </li>
+                          
+                <div style="height:0px;"></div>
+            </ul>
+        </div>
+
+    </div>
+</body>
+</html>
