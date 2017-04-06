@@ -1,0 +1,475 @@
+/* Swipe works with mouse as well but often causes text selection. */
+#listPage * {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+li {
+    cursor: pointer !important;
+    padding-right: 16px !important;
+}
+
+.ui-listview > .ui-li-static {
+    padding: 0 0 0 0;
+}
+
+ui-li-static ui-body-inherit ui-first-child {
+    padding: 0 0 0 0;
+}
+
+
+.ui-listview > .ui-li-static, .ui-listview > .ui-li-divider, .ui-listview > li > a.ui-btn {
+    white-space: normal !important;
+}
+
+.split-custom-wrapper {
+    /* position wrapper on the right of the listitem */
+    position: absolute;
+    right: 10px; /* padding for scrollbars !!! */
+    top: 0;
+    height: 100%;
+}
+
+.split-custom-button {
+    position: relative;
+    float: right; /* allow multiple links stacked on the right */
+    height: 100%;
+    margin: 0px 8px 0px 0px !important;
+    min-width: 3em; /* remove boxshadow and border */
+    border: none;
+    moz-border-radius: 0;
+    webkit-border-radius: 0;
+    border-radius: 0;
+    moz-box-shadow: none;
+    webkit-box-shadow: none;
+    box-shadow: none;
+    z-index: 9999999;
+}
+
+.split-custom-button span.ui-btn-inner {
+    /* position icons in center of listitem*/
+    position: relative;
+    margin-top: 50%;
+    margin-left: 50%; /* compensation for icon dimensions */
+    top: 11px;
+    left: -12px;
+    height: 40%; /* stay within boundaries of list item */
+}
+
+.wordwrap {
+    /* wrap long text and urls */
+    white-space: pre; /* CSS 2.0 */
+    white-space: pre-wrap; /* CSS 2.1 */
+    white-space: pre-line; /* CSS 3.0 */
+    white-space: -pre-wrap; /* Opera 4-6 */
+    white-space: -o-pre-wrap; /* Opera 7 */
+    white-space: -moz-pre-wrap; /* Mozilla */
+    word-wrap: break-word; /* IE 5+ */
+}
+
+.wrap_form_text {
+    /* wrap long text and urls */
+    white-space: pre; /* CSS 2.0 */
+    white-space: pre-wrap; /* CSS 2.1 */
+    white-space: pre-line; /* CSS 3.0 */
+    white-space: -pre-wrap; /* Opera 4-6 */
+    white-space: -o-pre-wrap; /* Opera 7 */
+    white-space: -moz-pre-wrap; /* Mozilla */
+    word-wrap: break-word; /* IE 5+ */
+}
+
+textarea {
+    min-height: 60px !important;
+}
+
+#qrcontent {
+    margin: 0 !important;
+    padding: 18px 0px 8px 0px !important;
+    border: 0 !important;
+    outline: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 1100px !important;
+    background-color: #ffffff !important;
+}
+
+/* 24px Sets height of edit & delete buttons in listview!!! */
+#rsslistfetch-ul li a {
+    height: 100% !important;
+}
+
+.feed_wrapper li {
+    float: left;
+    padding-right: 40px !important;
+    width: 100% !important;
+}
+
+.category_header {
+    float: left;
+    padding-top: 12px !important;
+    padding-left: 12px !important;
+}
+
+.split-videos-wrapper {
+    /* position wrapper on the right of the listitem */
+    position: absolute;
+    right: 10px; /* padding for scrollbars !!! */
+    top: 0;
+    /*height: 40%;*/
+}
+
+.split-videos-button {
+    position: relative;
+    float: right; /* allow multiple links stacked on the right */
+    height: 40%;
+    margin: 0;
+    /* min-width: 3em; remove boxshadow and border */
+    border: none;
+    moz-border-radius: 0;
+    webkit-border-radius: 0;
+    border-radius: 0;
+    moz-box-shadow: none;
+    webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.split-videos-button span.ui-btn-inner {
+    /* position icons in center of listitem*/
+    position: relative;
+    margin-top: 50%;
+    margin-left: 50%; /* compensation for icon dimensions */
+    top: 11px;
+    left: -12px;
+    /*height: 40%;*/ /* stay within boundaries of list item */
+}
+
+.ui-listview > li.ui-first-child img:first-child:not(.ui-li-icon) {
+    -webkit-border-radius: .5em;
+    border-radius: .5em;
+}
+
+.ui-listview > li.ui-last-child img:first-child:not(.ui-li-icon) {
+    -webkit-border-radius: .5em;
+    border-radius: .5em;
+}
+
+h2 .hs {
+    font-family: Georgia,serif;
+    color: #4E443C;
+    letter-spacing: 0;
+    font-variant: small-caps;
+    text-transform: none;
+    font-weight: 100;
+    margin-bottom: 0;
+}
+
+li.ui-btn-active {
+    background-color: #22aadd !important;
+    border-color: #22aadd !important;
+    color: #fff !important;
+    text-shadow: 0 0 #0088bb !important;
+}
+
+/*/////////////////////////////////////////////////*/
+/* DO NOT REMOVE THIS !!! */
+.iscroll-scroller {
+    min-width: 100% !important;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*////////////////////////////////////////////////////*/
+
+#zvideowrapper {
+    height: 100% !important;
+}
+
+/* DO NOT REMOVE THIS !!! */
+.divrss {
+    min-width: 100% !important;
+    padding: 0 0 0 0 !important;
+    margin: 0 0 0 -14px !important;
+}
+
+ui-li-static, li {
+    background-color: transparent !important;
+    border: solid 1px transparent !important; /* #9CAAC1; */
+}
+
+.ui-listview > li p {
+    /* wrap long text and urls */
+    white-space: pre; /* CSS 2.0 */
+    white-space: pre-wrap; /* CSS 2.1 */
+    white-space: pre-line; /* CSS 3.0 */
+    white-space: -pre-wrap; /* Opera 4-6 */
+    white-space: -o-pre-wrap; /* Opera 7 */
+    white-space: -moz-pre-wrap; /* Mozilla */
+    word-wrap: break-word; /* IE 5+ */
+}
+
+.ui-submit {
+    height: 10px !important;
+    font-size: .9em !important;
+    line-height: .9 !important;
+    font-family: sans-serif /*{global-font-family}*/;
+}
+
+.inline-label { 
+    white-space: nowrap !important;
+    width: 64px !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    float:left !important;     
+    padding: 16px 4px 0px 0px !important;
+    font-size: .9em !important;
+    line-height: 1em !important;
+}
+.inline-label-r { 
+    white-space: nowrap !important;
+    width: 64px !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    float:right !important;     
+    padding: 16px 4px 0px 0px !important;
+    font-size: .9em !important;
+    line-height: 1em !important;
+}
+
+
+/*//////////////////////// IMPORTANT ////////////////////////*/
+
+/** {margin: 0; padding: 0;}*/
+
+ul {
+  list-style-type: none;
+  width: 100%;
+}
+
+li img {
+  float: left;
+}
+
+li {
+  padding: 2px;
+  overflow: hidden;
+  margin-left: 12px !important;
+}
+
+li:hover {
+  background: #eee;
+  cursor: pointer;
+}
+
+.ellipsis {
+    flow-from: left;
+    vertical-align: top;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    font-size: 1.2em !important;    
+    line-height: 1.2em !important;     /* fallback */
+    max-height: 1.2em !important;      /* fallback */
+    -webkit-line-clamp: 1; /* number of lines to show */
+    -webkit-box-orient: vertical;
+    font-family: 'Oswald', 'Helvetica', 'Verdana', 'Calibri', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    -webkit-box-orient: vertical !important;
+    text-align: left !important;    
+    top: 0px !important;
+    vertical-align: top !important;
+    margin: -2px 0px 0px 0px !important;
+    word-wrap: break-word !important;
+}
+.ellipsis2 {
+    flow-from: left;
+    vertical-align: top;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    font-size: 1.1em !important;
+    line-height: 1.0em;     /* fallback */
+    max-height: 2.0em;     /* fallback */
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
+    /*font-family: 'Yanone Kaffeesatz', 'Pavanam', 'BenchNine', 'Calibri', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;*/
+    font-family: 'BenchNine', 'Calibri', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-weight: 200;
+    overflow-wrap: break-word;
+    -webkit-font-smoothing: antialiased;
+    -webkit-box-orient: vertical !important;    
+    text-align: left !important;
+    margin: 1px 0px 0px 0px !important;   
+    word-wrap: break-word !important; 
+}
+
+/*.zdescription {
+    vertical-align: top;
+    overflow: auto;
+    font-size: .8em !important;
+    font-family: 'BenchNine', 'Calibri', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+}*/
+
+/*.ui-li-duration*/
+.duration-left {
+    position: relative !important;
+    float: right;
+    z-index: 9999 !important;
+    width: auto !important;
+    height: auto !important;     
+    vertical-align: bottom; 
+    color: white !important;     
+    background-color: #000000 !important;
+    font-size: .8em;
+    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-weight: normal;
+    font-style: bold;      
+    margin: 3.4em .5em 0px 0px;
+    padding: 0px 1px 1px 1px;
+    /*width: 5.21em !important;
+    height: 3.625em !important;      */
+}
+
+.duration-right {
+    position: relative !important;
+    width: auto !important;
+    height: auto !important;     
+    vertical-align: bottom; 
+    bottom: 2px;
+    padding-right: 2px;
+    color: white !important;     
+    overflow: hidden;
+    background-color: black !important;
+    float: right !important;
+    right: 0px !important;
+    z-index: 9999999999 !important;
+    font-size: .8em;
+    font-family: "Calibri", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    font-weight: normal;
+    font-style: normal;        
+}
+.duration-cover {
+    float: left;
+    margin: 0px 6px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    width: 5.21em !important;
+    height: 3.625em !important;
+    border: solid 1px transparent !important; 
+    -webkit-border-radius: .5em;
+    border-radius: .5em;
+    overflow: hidden;
+    background-color: transparent !important;
+    position: relative !important;
+    z-index: 999999999 !important;
+}
+
+.rounded-img, .ui-li-icon {
+    position: absolute !important;
+    top: 0px;
+    left: 0px;
+    margin: 0px 6px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    width: 5.21em !important;
+    height: 3.625em !important;
+    border: solid 1px transparent !important; 
+    -webkit-border-radius: .5em;
+    border-radius: .5em;
+    overflow: hidden;
+    background-color: transparent !important;
+    z-index: 9 !important;
+}
+
+.duration-cover:hover, .duration-cover:hover .rounded-img {
+    margin: 0px 6px 0px 1px;
+    width: 5.44em !important;
+    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, .8);
+    -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, .8);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, .8);
+    border: 1px solid #ff0000 !important;
+}
+
+#maincontent {
+    overflow: hidden !important;
+}
+
+.active, i.ui-btn-active {
+    background-color: #22aadd !important;
+    border-color: #22aadd !important;
+    color: #fff !important;
+    text-shadow: 0 0 #0088bb !important;
+}
+
+#feeditems-ul {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    width: 100%;
+    height: 100%;
+    margin: 0 6px 0 0;
+    padding: 0;
+    left: 0 !important;
+}
+
+#feeditems-ul .ui-li {
+    /*height: 3.7em !important;*/
+    min-height: 10.7em !important;
+}
+
+#feeditems-ul .placeholder-video {
+    display: inline-block;
+    position: relative;
+}
+
+#feeditems-ul .placeholder-video:hover:after {
+    margin: 0 0 0 16px;
+}
+
+.iscroll-wrapper {
+    min-height:    0;  
+    position: relative;                      
+}
+
+.divrss {
+    position: relative !important;
+    overflow-x: hidden !important;
+    overflow-y: visible !important;
+    padding-top: 10px !important;
+    padding-bottom: 200px !important; 
+}
+
+#zebra {
+    /*position: absolute !important;
+    top: 0px !important;*/
+    margin-right:0
+}
+
+#zvideowrapper {
+    height: 100% !important;
+}
+
+#zvideowrapper ul li {
+    border-top-width: 6px !important;
+    height: 3.9em !important;
+}
+
+#zvideowrapper {
+    position: absolute !important;
+    width: 100%;
+    float: left;
+    /*top: 0px;*/
+    left: 0px;
+    /*margin: 0 0 0 16px !important;*/
+    /*height: 90px;*/
+    height: 100% !important;
+    z-index: 9999999;
+    border: 1px none #303030;  
+    background-color: transparent !important; 
+    overflow-x: hidden;
+    overflow-y: visible;
+    padding-bottom: 1200px !important;
+}
+
+

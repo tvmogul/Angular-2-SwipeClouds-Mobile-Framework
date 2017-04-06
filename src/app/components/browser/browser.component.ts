@@ -30,8 +30,9 @@ export class BrowserComponent implements OnInit, AfterViewInit, OnDestroy {
   public _zheight: any;
   public sub: any; // -> Subscriber
   name: any;
+  public zebra: any;
 
-  constructor( public sanitizer: DomSanitizer, 
+  constructor( public sanitizer: DomSanitizer,
         private windowService: WindowService,
         public _gps: GetPageService,
         private browserrouter: Router,
@@ -65,6 +66,7 @@ export class BrowserComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnInit() {
+    this.zebra = this.LocalStorage.get('feeds_item');
     this._gps.getPage(this.zurl).subscribe(
         (data) => {
           this.page = this.sanitizer.bypassSecurityTrustResourceUrl(data);

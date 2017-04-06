@@ -16,6 +16,14 @@ export class Feed {
     showvideo: boolean;
     moviecategory: string;
     duration: string;
+    warnings: string;
+    sideeffects: string;
+    dosage: string;
+    anticoagulant: boolean;
+    carcinogenic: boolean;
+    hypoglycemic: boolean;
+    liverdamage: boolean;
+    kidneydamage: boolean;
 
     constructor(FeedId: string,
                 category: string,
@@ -30,7 +38,15 @@ export class Feed {
                 rank: number,
                 showvideo: boolean,
                 moviecategory: string,
-                duration: string) {
+                duration: string,
+                warnings: string,
+                sideeffects: string,
+                dosage: string,
+                anticoagulant: boolean,
+                carcinogenic: boolean,
+                hypoglycemic: boolean,
+                liverdamage: boolean,
+                kidneydamage: boolean) {
 
     this.FeedId = FeedId;
     this.category = category;
@@ -46,6 +62,14 @@ export class Feed {
     this.showvideo = showvideo;
     this.moviecategory = moviecategory;
     this.duration = duration;
+    this.warnings = warnings;
+    this.sideeffects = sideeffects;
+    this.dosage = dosage;
+    this.anticoagulant = anticoagulant;
+    this.carcinogenic = carcinogenic;
+    this.hypoglycemic = hypoglycemic;
+    this.liverdamage = liverdamage;
+    this.kidneydamage = kidneydamage;
     }
 
     setComplete() {
@@ -63,6 +87,14 @@ export class Feed {
         this.showvideo = false;
         this.moviecategory = '';
         this.duration = '';
+        this.warnings = '';
+        this.sideeffects = '';
+        this.dosage = '';
+        this.anticoagulant = false;
+        this.carcinogenic = false;
+        this.hypoglycemic = false;
+        this.liverdamage = false;
+        this.kidneydamage = false;
     }
 
     

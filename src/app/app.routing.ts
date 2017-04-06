@@ -4,8 +4,10 @@ import { SwipeCloudComponent } from './components/swipe-cloud/swipe-cloud.compon
 import { VideoComponent } from './components/video/video.component';
 import { CordovaComponent } from './components/cordova/cordova.component';
 import { BrowserComponent } from './components/browser/browser.component';
-import { ScannerComponent } from './components/scanner/scanner.component';
+import { RssComponent } from './components/rss/rss.component';
 import { BlankComponent } from './components/blank/blank.component';
+import { ReaderComponent } from './components/reader/reader.component';
+import { AdsComponent } from './components/ads/ads.component';
 import { AppComponent } from './app.component';
 
 // let NavigationExtras: Array<any>;
@@ -16,7 +18,9 @@ const routes: Routes = [
     {path: 'video', component: VideoComponent},
     {path: 'cordova', component: CordovaComponent},
     {path: 'browser', component: BrowserComponent},
-    {path: 'scanner', component: ScannerComponent},
+    {path: 'rss', component: RssComponent},
+    {path: 'reader', component: ReaderComponent},
+    {path: 'ads', component: AdsComponent},
     {path: 'blank', component: BlankComponent},
     {path: '**', pathMatch: 'prefix', redirectTo: ''}
 ];

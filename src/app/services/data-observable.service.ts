@@ -42,7 +42,7 @@ export class DataObservableService {
     _category = 'movies';
     _mcat = ''; // movie category
     _start = 1; // rss_ads.start_index;
-    _max = 200;
+    _max = 250;
     _pc = '';   // Postal Code of store placing ads
     _rad = '';  // Radius around Postal Code to retrieve ads based on zip code radius
 
@@ -86,7 +86,6 @@ export class DataObservableService {
         // Editor says use const but these aren't so I used 'let' instead of 'const'
         let jsonp_rnd = '&rnd=' + this.getRandomInt(1, 500);
         let jsonp_url = jsonp_base + jsonp_param + jsonp_rnd;
-
         return this._jsonp
             .get(jsonp_url, this.options)
             .retry(this.retryCount)
@@ -119,6 +118,23 @@ export class DataObservableService {
             this._pc = s.pc;
             this._rad = s.rad;
             // this.LocalStorage.set('feeds_swipeclouds', s);
+        } else {
+            this._category = 'movies';
+            this._mcat = '';
+            this._start = 0;
+            this._max = 500;
+            this._pc = '';
+            this._rad = '';
+            if (this.LocalStorage.isAvailable()) {
+                this.LocalStorage.set('feeds_swipeclouds', {
+                    'category': 'movies',
+                    'mcat': '',
+                    'start': 0,
+                    'max': 250,
+                    'pc': '',
+                    'rad': ''
+                });
+            }
         }
 
         let local_base = './assets/data/' + this._category + '.json?';  // ./assets/data/movies.json
@@ -262,6 +278,24 @@ export class DataObservableService {
                 data.link  = this.getVideoEmbed(data.linkType, data.linkValue);
                 // let objDate = { year: '', month: '', day: '', hours: '', minutes: '', seconds: '' };
                 // this.getDate(date, objDate);
+                if (data.image.match(/^img_default/)) {
+                    let s1 = data.image;
+                    data.image = s1.replace('img_default', './assets/img_health');
+                }
+                if (data.image.match(/^img_health/)) {
+                    if (data.image.match(/^assets/)) {
+                    } else {
+                        let s1 = data.image;
+                        data.image = s1.replace('img_health', './assets/img_health');
+                    }
+                }
+
+                // anticoagulant
+                // carcinogenic
+                // hypoglycemic
+                // liverdamage
+                // kidneydamage
+
                 total++;
             });
         };

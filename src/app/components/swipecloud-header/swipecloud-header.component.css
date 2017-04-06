@@ -258,7 +258,7 @@ header {
 .split-custom-wrapper {
     /* position wrapper on the right of the listitem */
     position: absolute;
-    right: 10px; /* padding for scrollbars !!! */
+    right: 0px; /* padding for scrollbars !!! */
     top: 0;
     height: 100%;
 }
@@ -267,8 +267,8 @@ header {
     position: relative;
     float: right; /* allow multiple links stacked on the right */
     height: 100%;
-    margin: 0px 8px 0px 0px !important;
-    min-width: 3em;
+    margin: 0px 4px 0px 0px !important;
+    max-width: 3em;
     /* remove boxshadow and border */
     border: none;
     moz-border-radius: 0;

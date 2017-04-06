@@ -43,16 +43,7 @@ export class LocalStorageService {
 
   private serialize = (value: any): string => {
     return JSON.stringify(value);
-  };
-
-  private deserialize = (value: string): any => {
-    try {
-      return JSON.parse(value);
-    } catch (e) {
-      console.warn(`The value provided is not a valid JSON ${value}`);
-      return null;
-    }
-  };
+  }
 
   private checkSupport() {
     try {
@@ -64,4 +55,12 @@ export class LocalStorageService {
     }
   }
 
+  private deserialize = (value: string): any => {
+    try {
+      return JSON.parse(value);
+    } catch (e) {
+      console.warn(`Yo Bro, your value is NOT a valid JSON ${value}`);
+      return null;
+    }
+  }
 }

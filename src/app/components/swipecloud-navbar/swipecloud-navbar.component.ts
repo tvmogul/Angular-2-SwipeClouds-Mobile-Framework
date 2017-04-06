@@ -26,6 +26,7 @@ export class SwipecloudNavbarComponent implements OnInit {
   CallBrowser(event, categoryRef: string) {
     event.preventDefault();
     window.open(categoryRef, '_self', '', true);
+    // This location call allows back button on mobile devices to work correctly!
     this.location.go('');
   }
 

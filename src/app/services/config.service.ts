@@ -37,13 +37,14 @@ export class Config {
         'bg_whitealien.jpg',
         'bg_wood.jpg',
         'bg_ww.gif'
-    ];
+        ];
 
     // Our SwipeCloud Names we are using
     static DATA_CLOUDS: Array<string> = [
         'dronesCloud',
         'eduCloud',
-        'sportsCloud'
+        'sportsCloud',
+        'solCloud'
     ];
 
     @Output()

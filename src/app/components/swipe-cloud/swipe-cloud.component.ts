@@ -151,7 +151,7 @@ export class SwipeCloudComponent implements OnInit, AfterViewInit, OnDestroy {
             try {
               this.cloudID = _actionid;
             } catch(e) { }
-          } else if(_action === 'drag') {
+          } else if (_action === 'drag') {
             this._drag = _actionid;
             if(_actionid === 'on') {
               this.oopts.dragControl = true;
@@ -185,6 +185,13 @@ export class SwipeCloudComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnInit() {
     this.elementRef.nativeElement = '';
+
+    let s = this.LocalStorage.get('settings_swipeclouds');
+    if (s) {
+      this.cloudID = s.cloudid;
+    } else {
+      this.LocalStorage.set('settings_swipeclouds', 0);
+    }
 
     try {
       TagCanvas.Start('swipeCanvas', Config.DATA_CLOUDS[this.cloudID], this.oopts);
@@ -273,6 +280,23 @@ export class SwipeCloudComponent implements OnInit, AfterViewInit, OnDestroy {
       this.cloudsrouter.navigate(['/cordova']);
     } else {
       this.cloudsrouter.navigate(['/video', {category: categoryRef, start: 0}]);
+    }
+  }
+
+  CallRss(event, categoryRef: string) {
+    event.preventDefault();
+    let s = this.LocalStorage.get('feeds_swipeclouds');
+    if (s) {
+      s.category = categoryRef;
+      s.start = 0;
+      this.LocalStorage.set('feeds_swipeclouds', s);
+    }
+
+    if(categoryRef === 'cordova_tools') {
+      // shows a list of Cordova Plugins
+      this.cloudsrouter.navigate(['/cordova']);
+    } else {
+      this.cloudsrouter.navigate(['/rss', {category: categoryRef, start: 0}]);
     }
   }
 

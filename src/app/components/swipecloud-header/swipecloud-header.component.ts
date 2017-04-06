@@ -28,10 +28,10 @@ export class SwipecloudHeaderComponent {
         event.preventDefault();
         // if (categoryRef === 'cloud') {
         //     this.nextCloud();
-        // } 
+        // }
         // if (categoryRef === 'bgimage') {
         //     this.nextBackground();
-        // } 
+        // }
     }
 
     nextCloud(event) {
@@ -40,13 +40,14 @@ export class SwipecloudHeaderComponent {
 
         let s = this.LocalStorage.get('settings_swipeclouds');
         if (s) {
-            if (s.cloudid + 1 < Config.DATA_CLOUDS.length) { 
-                s.cloudid = s.cloudid + 1; 
-            } else { 
-                s.cloudid = 0; 
+            if (s.cloudid + 1 < Config.DATA_CLOUDS.length) {
+                s.cloudid = s.cloudid + 1;
+            } else {
+                s.cloudid = 0;
             }
             this.LocalStorage.set('settings_swipeclouds', s);
-        } 
+        }
+
         this.cloudsheaderrouter.navigate(['/blank']);
         setTimeout( () => {
             // this.cloudsheaderrouter.navigate(['/swipeclouds', {cloudid: s.cloudid }]);
@@ -63,7 +64,7 @@ export class SwipecloudHeaderComponent {
             if (g.bgimage + 1 < Config.DATA_BACKGROUNDS.length) { g.bgimage = g.bgimage + 1; } else { g.bgimage = 0; }
             this.LocalStorage.set('settings_swipeclouds', g);
             document.getElementById('swipeCanvas').style.backgroundColor = '#000000';
-            document.getElementById('swipeCanvas').style.backgroundImage = 'url(./assets/img/' 
+            document.getElementById('swipeCanvas').style.backgroundImage = 'url(./assets/img/'
             + Config.DATA_BACKGROUNDS[g.bgimage] + ')';
             document.getElementById('swipeCanvas').style.backgroundSize = 'cover';
         }

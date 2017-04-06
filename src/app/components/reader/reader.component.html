@@ -1,0 +1,50 @@
+<div data-id="content" data-role="content">
+    <div id="zvideowrapper" data-iscroll="{
+        'hScroll': false,
+        'vScroll': true,
+        'resizeEvents': 'orientationchange',
+        'resizeWrapper':true,
+        'mouseWheel': true,
+        'click': true,
+        'interactiveScrollbars': true,
+        'shrinkScrollbars': 'scale'
+        }" style="padding-bottom: 200px !important;">
+        <!--<div id="divrss" [ngClass]='["divrss"]' [ngStyle]='["padding-bottom: 1200px !important;"]'>-->
+        <div id="divrss" class="divrss" style="padding-top:0px !important;margin-bottom:60px !important;
+            min-height: 800px; -webkit-transition: -webkit-transform 0ms; transition: -webkit-transform 0ms; 
+            -webkit-transform-origin: 0px 0px;transform-origin: 0px 0px; 
+            -webkit-transform: translate(0px, 0px) translateZ(0px);
+            transform: translate(0px, 0px) translateZ(0px)">
+            <table style="padding: 12px 40px 12px 12px !important;">
+                <tr>
+                    <td>
+                        <table style="padding: 0px 0px -22px 0px !important;">
+                            <tr>
+                                <td><img style="width: 90px !important;height: 90px !important;" src="{{zebra.image}}" /></td>
+                                <td><h2 [ngClass]="['ellipsis']">{{zebra.title}}</h2></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr style="margin: -22px 40px 0px 0px !important;">
+                    <td style="text-align: left !important;">
+                        <p>Dosage:&nbsp;{{this.zebra.dosage}}</p>
+                        <div style="background-color: white;color: red">   
+                            <span style="font-weight:bold !important;" [hidden]='!this.zebra.anticoagulant'>&nbsp;Anticoagulant</span>
+                            <span style="font-weight:bold !important;" [hidden]='!this.zebra.carcinogenic'>&nbsp;Carcinogenic</span>
+                            <span style="font-weight:bold !important;" [hidden]='!this.zebra.hypoglycemic'>&nbsp;Hypoglycemic</span>
+                            <span style="font-weight:bold !important;" [hidden]='!this.zebra.liverdamage'>&nbsp;Liver Damage</span>
+                            <span style="font-weight:bold !important;" [hidden]='!this.zebra.kidneydamage'>&nbsp;Kidney Damage</span>
+                            <div id="warnings"></div>
+                        </div>
+                        <!--<div id="sideeffects"></div>-->
+                        <div id="description"></div>
+                    </td>
+                </tr>
+            </table>
+            <div style="width: 100% !important;height: 100px !important;">&nbsp;<div>
+        </div>
+    </div>
+</div>
+
+

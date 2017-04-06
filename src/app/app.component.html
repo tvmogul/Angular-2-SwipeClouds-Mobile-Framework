@@ -4,7 +4,9 @@
     <app-video-header [hidden]='!show_video'></app-video-header>   
     <app-cordova-header [hidden]='!show_cordova'></app-cordova-header>
     <app-browser-header [hidden]='!show_browser'></app-browser-header> 
-    <app-scanner-header [hidden]='!show_scanner'></app-scanner-header>
+    <app-rss-header [hidden]='!show_rss'></app-rss-header>
+    <app-reader-header [hidden]='!show_reader'></app-reader-header>
+    <app-ads-header [hidden]='!show_ads'></app-ads-header>
 </header>
 <div id="appContent">  
     <router-outlet>
@@ -94,7 +96,9 @@
     <app-video-navbar [hidden]='!show_video'></app-video-navbar>
     <app-cordova-navbar [hidden]='!show_cordova'></app-cordova-navbar>
     <app-browser-navbar [hidden]='!show_browser'></app-browser-navbar> 
-    <app-scanner-navbar [hidden]='!show_scanner'></app-scanner-navbar>
+    <app-rss-navbar [hidden]='!show_rss'></app-rss-navbar>
+    <app-reader-navbar [hidden]='!show_reader'></app-reader-navbar>
+    <app-ads-navbar [hidden]='!show_ads'></app-ads-navbar>
 </footer>
 
 

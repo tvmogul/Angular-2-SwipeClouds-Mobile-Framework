@@ -1,0 +1,23 @@
+.reader-img, .ui-li-icon {
+    position: absolute !important;
+    top: 0px;
+    left: 0px;
+    margin: 0px 6px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    width: 60px !important;
+    height: 60px !important;
+    border: solid 0px transparent !important; 
+}
+
+.zchecked {
+    display: inline-block;
+    min-width: 100px;
+    height: 24px;
+    margin-left: -28px;
+    padding-left: 028px;
+    padding-bottom: 2px;
+    background: url('../../../assets/img/ck_true.png') no-repeat 0 0;
+    line-height: 24px;
+    background-position: 0 0;
+    font-weight: 700;
+}

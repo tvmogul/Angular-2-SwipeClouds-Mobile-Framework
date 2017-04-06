@@ -30,7 +30,9 @@ export class AppComponent implements OnInit {
   public show_video: Boolean = false;
   public show_cordova: Boolean = false;
   public show_browser: Boolean = false;
-  public show_scanner: Boolean = false;
+  public show_rss: Boolean = false;
+  public show_reader: Boolean = false;
+  public show_ads: Boolean = false;
 
   clicked(event, pageRef: string) {
     event.preventDefault();
@@ -58,41 +60,71 @@ export class AppComponent implements OnInit {
       this.show_video = false;
       this. show_cordova = false;
       this.show_browser = false;
-      this.show_scanner = false;
+      this.show_rss = false;
+      this.show_reader = false;
+      this.show_ads = false;
       if (event.url.indexOf('/swipeclouds') > -1) {
           this.show_swipecloud = true;
           this.show_video = false;
           this. show_cordova = false;
           this.show_browser = false;
-          this.show_scanner = false;
+          this.show_rss = false;
+          this.show_reader = false;
+          this.show_ads = false;
       }
       if (event.url.indexOf('/video') > -1) {
         this.show_swipecloud = false;
         this.show_video = true;
         this. show_cordova = false;
         this.show_browser = false;
-        this.show_scanner = false;
+        this.show_rss = false;
+        this.show_reader = false;
+        this.show_ads = false;
       }
       if (event.url.indexOf('/cordova') > -1) {
         this.show_swipecloud = false;
         this.show_video = false;
         this. show_cordova = true;
         this.show_browser = false;
-        this.show_scanner = false;
+        this.show_rss = false;
+        this.show_reader = false;
+        this.show_ads = false;
       }
       if (event.url.indexOf('/browser') > -1) {
         this.show_swipecloud = false;
         this.show_video = false;
         this. show_cordova = false;
         this.show_browser = true;
-        this.show_scanner = false;
+        this.show_rss = false;
+        this.show_reader = false;
+        this.show_ads = false;
       }
-      if (event.url.indexOf('/scanner') > -1) {
+      if (event.url.indexOf('/rss') > -1) {
         this.show_swipecloud = false;
         this.show_video = false;
         this. show_cordova = false;
         this.show_browser = false;
-        this.show_scanner = true;
+        this.show_rss = true;
+        this.show_reader = false;
+        this.show_ads = false;
+      }
+      if (event.url.indexOf('/reader') > -1) {
+        this.show_swipecloud = false;
+        this.show_video = false;
+        this. show_cordova = false;
+        this.show_browser = false;
+        this.show_rss = false;
+        this.show_reader = true;
+        this.show_ads = false;
+      }
+      if (event.url.indexOf('/ads') > -1) {
+        this.show_swipecloud = false;
+        this.show_video = false;
+        this. show_cordova = false;
+        this.show_browser = false;
+        this.show_rss = false;
+        this.show_reader = false;
+        this.show_ads = true;
       }
     });
 
@@ -115,7 +147,7 @@ export class AppComponent implements OnInit {
             'category': 'movies',
             'mcat': '',
             'start': 0,
-            'max': 50,
+            'max': 250,
             'pc': '',
             'rad': ''
           });

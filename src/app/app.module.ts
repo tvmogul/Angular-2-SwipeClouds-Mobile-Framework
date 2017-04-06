@@ -28,9 +28,15 @@ import { CordovaNavbarComponent } from './components/cordova-navbar/cordova-navb
 import { BrowserComponent } from './components/browser/browser.component';
 import { BrowserHeaderComponent } from './components/browser-header/browser-header.component';
 import { BrowserNavbarComponent } from './components/browser-navbar/browser-navbar.component';
-import { ScannerComponent } from './components/scanner/scanner.component';
-import { ScannerHeaderComponent } from './components/scanner-header/scanner-header.component';
-import { ScannerNavbarComponent } from './components/scanner-navbar/scanner-navbar.component';
+import { RssComponent } from './components/rss/rss.component';
+import { RssHeaderComponent } from './components/rss-header/rss-header.component';
+import { RssNavbarComponent } from './components/rss-navbar/rss-navbar.component';
+import { ReaderComponent } from './components/reader/reader.component';
+import { ReaderHeaderComponent } from './components/reader-header/reader-header.component';
+import { ReaderNavbarComponent } from './components/reader-navbar/reader-navbar.component';
+import { AdsComponent } from './components/ads/ads.component';
+import { AdsHeaderComponent } from './components/ads-header/ads-header.component';
+import { AdsNavbarComponent } from './components/ads-navbar/ads-navbar.component';
 
 @NgModule({
   declarations: [
@@ -51,9 +57,15 @@ import { ScannerNavbarComponent } from './components/scanner-navbar/scanner-navb
     BrowserComponent,
     BrowserHeaderComponent,
     BrowserNavbarComponent,
-    ScannerComponent,
-    ScannerHeaderComponent,
-    ScannerNavbarComponent
+    RssComponent,
+    RssHeaderComponent,
+    RssNavbarComponent,
+    ReaderComponent,
+    ReaderHeaderComponent,
+    ReaderNavbarComponent,
+    AdsComponent,
+    AdsHeaderComponent,
+    AdsNavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -69,7 +81,6 @@ import { ScannerNavbarComponent } from './components/scanner-navbar/scanner-navb
 export class AppModule {
 
 
-  
   // onClick(button: string) {
   //   alert(button);
   // }
