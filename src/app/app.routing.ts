@@ -56,4 +56,4 @@ export class AppRoutingModule {
 
 }
 
-export const routingComponents = [SwipeCloudComponent, VideoComponent];
+export const routingComponents = [SwipeCloudComponent, VideoComponent, CordovaComponent, BrowserComponent, RssComponent, BlankComponent, ReaderComponent, AdsComponent];

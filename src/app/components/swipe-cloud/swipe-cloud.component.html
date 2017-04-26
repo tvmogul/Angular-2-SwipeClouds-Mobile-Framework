@@ -1,9 +1,11 @@
 <div id="swipeCanvasContainer" style="display: block !important;">
+    <!--<canvas id="c" [attr.width]='_wcloud' [attr.height]='_hcloud' style="border:1px solid #ff0000"></canvas>-->
     <canvas id="swipeCanvas" [attr.width]='_wcloud' [attr.height]='_hcloud' 
-    class="zcanvas_bg_white" style="display: block !important;overflow: hidden !important;background-image: none; cursor: grab;"></canvas>
+    class="zcanvas_bg_white" style="display: block !important;overflow: hidden !important;background-image: none; cursor: grab;"></canvas>   
 </div>
-
 <div id="dronesCloud" style="display: none !important;" [hidden]="!visible">
+    <a type="button" (click)="loadBrowser($event, 'buynow', './assets/buy/In_App_BuyNow.html')" href="#" role="dtv_new" title="PayPal Buy Now"><img src="./assets/img_drones/1_buynow.png" alt="Icon 01" /></a>
+    <a type="button" (click)="loadBrowser($event, 'merchant', './assets/buy/In_App_Merchant.html')" href="#" role="dtv_new" title="Mercahnt Account"><img src="./assets/img_drones/1_merchant.png" alt="Icon 01" /></a>
     <a type="button" (click)="CallRoute($event, 'dtv_new')" href="#" role="dtv_new" title="New Drones"><img src="./assets/img_drones/1_newdrones.png" alt="Icon 01" /></a>
     <a type="button" (click)="CallRoute($event, 'dtv_flyingbikes')" title="Hover Boards"><img src="./assets/img_drones/1_flyingbikes.png" alt="Icon 01" /></a>
     <a type="button" (click)="CallRoute($event, 'ufos_all')" title="Aliens UFOs"><img src="./assets/img_drones/1_ufos.png" alt="Icon 01" /></a>
@@ -16,8 +18,24 @@
     <a type="button" (click)="CallRoute($event, 'dtv_racing')" href="#" role="dtv_racing" title="FPV Racing"><img src="./assets/img_drones/1_fpv.png" alt="Icon 01" /></a>
     <a type="button" (click)="CallRoute($event, 'movies')" href="#" role="movies" title="SciFi Horror Movies"><img src="./assets/img_drones/1_movies.png" alt="Icon 01" /></a>
     <a type="button" (click)="CallRoute($event, 'cordova_tools')" href="#" role="movies" title="User Info, Scanner and Compass"><img src="./assets/img_drones/1_cordova.png" alt="Icon 01" /></a>
-    <a type="button" (click)="loadBrowser($event, 'chess')" href="#" role="movies" title="User Info, Scanner and Compass"><img src="./assets/img_drones/1_chess.png" alt="Icon 01" /></a>
+    <a type="button" (click)="loadBrowser($event, 'chess', './assets/chess/chess.html')" href="#" role="movies" title="User Info, Scanner and Compass"><img src="./assets/img_drones/jet.png" alt="Icon 01" /></a>
     <a type="button" (click)="openDialogBox('license')" href="#" data-id="demo" role="demo" title="Dialog Demo"><img src="./assets/img_drones/1_dialog.png" alt="Icon 01" /></a>
+</div>
+
+<div id="politicsCloud" style="display: none !important;" [hidden]="!visible">    
+    <a type="button" (click)="CallRoute($event, 'cf_policebrutality')" title="Killer Cops"><img src="./assets/img_politics/1_policebrutality.png" alt="Icon 01" /></a>
+    <a type="button" (click)="CallRoute($event, 'pol_911')" title="911"><img src="./assets/img_politics/1_911.png" alt="Icon 01" /></a>
+    <a type="button" (click)="CallRoute($event, 'pol_cia')" title="FBI CIA NSA"><img src="./assets/img_politics/1_agencies.png" alt="Icon 01" /></a>
+    <a type="button" (click)="CallRoute($event, 'pol_clintons')" title="The Clintons"><img src="./assets/img_politics/1_clintons.png" alt="Icon 01" /></a>
+    <a type="button" (click)="CallRoute($event, 'pol_dark')" title="Evil Politics"><img src="./assets/img_politics/1_dark.png" alt="Icon 01" /></a>
+    <a type="button" (click)="CallRoute($event, 'pol_jfk')" title="John F. Kennedy"><img src="./assets/img_politics/1_jfk.png" alt="Icon 01" /></a>
+    <a type="button" (click)="CallRoute($event, 'pol_me')" title="Middle East"><img src="./assets/img_politics/1_me.png" alt="Icon 01" /></a>
+    <a type="button" (click)="CallRoute($event, 'pol_miami')" title="Miami Politics"><img src="./assets/img_politics/1_miami.png" alt="Icon 01" /></a>
+    <a type="button" (click)="CallRoute($event, 'pol_dr')" title="Democrats Republicans"><img src="./assets/img_politics/1_dr.png" alt="Icon 01" /></a>
+    <a type="button" (click)="CallRoute($event, 'pol_wikileaks')" title="WikiLeaks"><img src="./assets/img_politics/1_wikileaks.png" alt="Icon 01" /></a>
+    <a type="button" (click)="CallRoute($event, 'pol_comedy')" title="Comedy"><img src="./assets/img_politics/1_comedy.png" alt="Icon 01" /></a>
+    <a type="button" (click)="CallRoute($event, 'pol_hollywood')" title="Hollywood"><img src="./assets/img_politics/1_hollywood.png" alt="Icon 01" /></a>
+    <a type="button" (click)="CallRoute($event, 'cf_clowns')" title="Killer Clowns"><img src="./assets/img_politics/1_clown.png" alt="Icon 01" /></a>
 </div>
 
 <div id="eduCloud" style="display: none !important;" [hidden]="!visible">

@@ -37,6 +37,7 @@ import { ReaderNavbarComponent } from './components/reader-navbar/reader-navbar.
 import { AdsComponent } from './components/ads/ads.component';
 import { AdsHeaderComponent } from './components/ads-header/ads-header.component';
 import { AdsNavbarComponent } from './components/ads-navbar/ads-navbar.component';
+import { AlertComponent } from './_directives/alert.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +66,8 @@ import { AdsNavbarComponent } from './components/ads-navbar/ads-navbar.component
     ReaderNavbarComponent,
     AdsComponent,
     AdsHeaderComponent,
-    AdsNavbarComponent
+    AdsNavbarComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,

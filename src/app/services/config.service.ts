@@ -30,8 +30,6 @@ export class Config {
         'bg_snow_home.gif',
         'bg_superman1.jpg',
         'bg_ufo1.jpg',
-        'bg_ufo2.jpg',
-        'bg_ufo3.jpg',
         'bg_vampirella.jpg',
         'bg_water.gif',
         'bg_whitealien.jpg',
@@ -42,10 +40,16 @@ export class Config {
     // Our SwipeCloud Names we are using
     static DATA_CLOUDS: Array<string> = [
         'dronesCloud',
+        'politicsCloud',
         'eduCloud',
         'sportsCloud',
         'solCloud'
     ];
+
+    static DATA_BUYNOW: any = {
+        'item_name': 'Wild Workout App',
+        'amount': '2.99'
+    };
 
     @Output()
     uploaded: EventEmitter<string> = new EventEmitter();

@@ -151,6 +151,25 @@ export class DataObservableService {
         .catch(this.handleError);
     }
 
+
+    getProductsLocal() {
+        const local_base = './assets/data/products.json?'; 
+        // we add a random vaule to prevent caching - this trick works nicely!
+        let local_rnd = 'rnd=' + this.getRandomInt(1, 500);
+        let local_url = local_base + local_rnd;
+
+        return this.http.request(local_url, { method: 'Get' })
+            .map( (res) => {
+                let products = res.json();
+                // this.checkInAppBuyProducts(inappbuyproducts);
+                // products.forEach((data) => {
+                //     alert(data.business);
+                // });
+                return products;
+            })
+            .catch(this.handleError);
+    }
+
     test() {
         // ttest
     }

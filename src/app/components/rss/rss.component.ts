@@ -101,13 +101,22 @@ export class RssComponent implements OnInit, AfterViewInit, OnDestroy {
                 this.location.go('');
             }
           }
-        }
-        // this method is preferred but reuires you to run a jsonp server
-        if (Config.DATA_SOURCE === 'remotejsonp') {
-          this.getFeeds();
-        } 
-        if (Config.DATA_SOURCE === 'localjson') {
-          this.getFeedsLocal();
+        } else if (this._category === 'pol_marijuana') {
+          let s = this.LocalStorage.get('feeds_swipeclouds');
+          if (s) {
+            s.category = 'pol_marijuana';
+            s.start = 0;
+            this.LocalStorage.set('feeds_swipeclouds', s);
+          }
+          this.rssrouter.navigate(['/video', {category: 'pol_marijuana', start: 0}]);
+        } else {
+          // this method is preferred but reuires you to run a jsonp server
+          if (Config.DATA_SOURCE === 'remotejsonp') {
+            this.getFeeds();
+          } 
+          if (Config.DATA_SOURCE === 'localjson') {
+            this.getFeedsLocal();
+          }
         }
     });
 

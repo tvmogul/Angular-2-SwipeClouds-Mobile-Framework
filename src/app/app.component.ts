@@ -26,7 +26,7 @@ export class AppComponent implements OnInit {
   curPage = 'swipeclouds';
   title = 'Eureka!';
 
-  public show_swipecloud: Boolean = true;
+  public show_swipecloud: Boolean = false;
   public show_video: Boolean = false;
   public show_cordova: Boolean = false;
   public show_browser: Boolean = false;
@@ -56,7 +56,7 @@ export class AppComponent implements OnInit {
     });
 
     approuter.events.subscribe(event => {
-      this.show_swipecloud = true;
+      this.show_swipecloud = false;
       this.show_video = false;
       this. show_cordova = false;
       this.show_browser = false;
@@ -71,8 +71,7 @@ export class AppComponent implements OnInit {
           this.show_rss = false;
           this.show_reader = false;
           this.show_ads = false;
-      }
-      if (event.url.indexOf('/video') > -1) {
+      } else if (event.url.indexOf('/video') > -1) {
         this.show_swipecloud = false;
         this.show_video = true;
         this. show_cordova = false;
@@ -80,8 +79,7 @@ export class AppComponent implements OnInit {
         this.show_rss = false;
         this.show_reader = false;
         this.show_ads = false;
-      }
-      if (event.url.indexOf('/cordova') > -1) {
+      } else if (event.url.indexOf('/cordova') > -1) {
         this.show_swipecloud = false;
         this.show_video = false;
         this. show_cordova = true;
@@ -89,8 +87,7 @@ export class AppComponent implements OnInit {
         this.show_rss = false;
         this.show_reader = false;
         this.show_ads = false;
-      }
-      if (event.url.indexOf('/browser') > -1) {
+      } else if (event.url.indexOf('/browser') > -1) {
         this.show_swipecloud = false;
         this.show_video = false;
         this. show_cordova = false;
@@ -98,8 +95,7 @@ export class AppComponent implements OnInit {
         this.show_rss = false;
         this.show_reader = false;
         this.show_ads = false;
-      }
-      if (event.url.indexOf('/rss') > -1) {
+      } else if (event.url.indexOf('/rss') > -1) {
         this.show_swipecloud = false;
         this.show_video = false;
         this. show_cordova = false;
@@ -107,8 +103,7 @@ export class AppComponent implements OnInit {
         this.show_rss = true;
         this.show_reader = false;
         this.show_ads = false;
-      }
-      if (event.url.indexOf('/reader') > -1) {
+      } else if (event.url.indexOf('/reader') > -1) {
         this.show_swipecloud = false;
         this.show_video = false;
         this. show_cordova = false;
@@ -116,8 +111,7 @@ export class AppComponent implements OnInit {
         this.show_rss = false;
         this.show_reader = true;
         this.show_ads = false;
-      }
-      if (event.url.indexOf('/ads') > -1) {
+      } else if (event.url.indexOf('/ads') > -1) {
         this.show_swipecloud = false;
         this.show_video = false;
         this. show_cordova = false;
@@ -125,6 +119,22 @@ export class AppComponent implements OnInit {
         this.show_rss = false;
         this.show_reader = false;
         this.show_ads = true;
+      } else if (event.url.indexOf('/') > -1) {
+          this.show_swipecloud = true;
+          this.show_video = false;
+          this. show_cordova = false;
+          this.show_browser = false;
+          this.show_rss = false;
+          this.show_reader = false;
+          this.show_ads = false;
+      } else if (event.url.indexOf('/blank') > -1) {
+          this.show_swipecloud = false;
+          this.show_video = false;
+          this. show_cordova = false;
+          this.show_browser = false;
+          this.show_rss = false;
+          this.show_reader = false;
+          this.show_ads = false;
       }
     });
 
@@ -138,6 +148,35 @@ export class AppComponent implements OnInit {
           'max': 50,
           'pc': '',
           'rad': ''
+        });
+    }
+
+    // Scraped data passed in from JAVA as URL Parameters
+    if (!LocalStorage.get('appdata')) {
+        LocalStorage.set('appdata', {
+          'appname': 'SC01',
+          'appid': '00000000-0000-0000-0000-000000000000',
+          'iphoneid': 'IPHONE ID',
+          'androidid': 'ANDROID ID',
+          'deviceid': 'DEVICE ID',
+          'subscriberid': 'SUBSCRIBER ID',
+          'simcardsn': 'SIM CARD SERIAL NUMBER',
+          'ipaddress': 'IPADDRESS',
+          'ipaddress2': 'IPADDRESS2',
+          'macaddress': 'MAC ADDRESS',
+          'devicename': 'DEVICE NAME',
+          'appversion': '2|2.0.0',
+          'sdk': 'SDK',
+          'name': 'Bill SerGio',
+          'ph': '',
+          'email': '',
+          'city': 'Miami',
+          'state': 'FL',
+          'ctry': 'US',
+          'pc': '33157',
+          'lat': '0',
+          'lng': '0',
+          'fr': '0'
         });
     }
 
@@ -186,6 +225,11 @@ export class AppComponent implements OnInit {
           });
       }
     }
+
+    // jQuery('form#ppMerchant').bind('reload', function (event) {
+
+    // });
+
   }
 
   // ngOnInit is called directly after constructor and before ngOnChange

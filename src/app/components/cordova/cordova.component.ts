@@ -18,37 +18,44 @@ export class CordovaComponent implements OnInit {
 
   constructor(private cordovarouter: Router) {
 
-     // To use this with *ngFor we must convert to an array
-     this.cordovatools  = [
-      {
-        title: 'Cordova User Data Plugin',
-        description: 'Grabs User Phone Data',
-        linkValue: 'data',
-        image: '1_info.png',
-        rank: 100
-      },
-      {
-        title: 'Cordova Compass Plugin',
-        description: 'Different Compasses',
-        linkValue: 'compass',
-        image: '1_compass.png',
-        rank: 100
-      },
-      {
-        title: 'Cordova Barcode Scanner Plugin',
-        description: 'Barcode Scanner',
-        linkValue: 'scanner',
-        image: '1_scan.png',
-        rank: 100
-      }
-      // {
-      //   title: 'Cordova Float Compass Plugin',
-      //   description: 'Tests Floating Compass',
-      //   linkValue: 'floatcompass',
-      //   image: '1_floatcompass.png',
-      //   rank: 100
-      // }
-    ];
+    // To use this with *ngFor we must convert to an array
+    this.cordovatools  = [
+    {
+      title: 'Cordova User Data Plugin Dialog',
+      description: 'Displays Scrapped User Data in Java Dialog',
+      linkValue: 'showUserDataListView',
+      image: '1_infodialog.png',
+      rank: 100
+    },
+    {
+      title: 'Cordova User Data Plugin JSON',
+      description: 'Returns Scrapped User Data in JSON Format',
+      linkValue: 'getUserDataJson',
+      image: '1_infojson.png',
+      rank: 99
+    },
+    {
+      title: 'Cordova Compass Plugin',
+      description: 'Different Compasses',
+      linkValue: 'compass',
+      image: '1_compass.png',
+      rank: 98
+    },
+    {
+      title: 'Cordova Barcode Scanner Plugin',
+      description: 'Barcode Scanner',
+      linkValue: 'scanner',
+      image: '1_scan.png',
+      rank: 97
+    }
+    // {
+    //   title: 'Cordova Float Compass Plugin',
+    //   description: 'Tests Floating Compass',
+    //   linkValue: 'floatcompass',
+    //   image: '1_floatcompass.png',
+    //   rank: 100
+    // }
+  ];
 
   }
 
@@ -77,10 +84,11 @@ export class CordovaComponent implements OnInit {
   CordovaPlugin(event, categoryRef: string) {
     event.preventDefault();
     let _param = 'User Data';
-    if (categoryRef === 'data') {
-      // alert('Plugin: UserDataPlugin' + '\r\n' + 'Function: showUserDataListView' + '\r\n' + 'Parameter: User Data');
+    if (categoryRef === 'showUserDataListView') {
       cordova.exec(this.showUserDataSuccess, this.showUserDataFailure, 'UserDataPlugin', 'showUserDataListView', [_param]);
-    } else if (categoryRef === 'compass') {
+    } else if (categoryRef === 'getUserDataJson') {
+      cordova.exec(this.getUserDataJson, this.showUserDataFailure, 'UserDataPlugin', 'getUserDataJson', []);
+    }else if (categoryRef === 'compass') {
       // alert('Plugin: CompassPlugin' + '\r\n' + 'Function: showCompass' + '\r\n' + 'Parameter: Compass');
       _param = 'Compass';
       cordova.exec(this.showCompassSuccess, this.showCompassFailure, 'CompassPlugin', 'showCompass', [_param]);
@@ -93,8 +101,38 @@ export class CordovaComponent implements OnInit {
       // alert('Scanner Code Being Called!');
       cordova.exec(this.showScannerSuccess, this.showScannerFailure, 'BarcodeScanner', 'scan', []);
     }
-  } // end CordovaPlugin
+  } // end CordovaPlugins
 
+  getUserDataString(result) {
+    alert('User Data: ' + result.text);
+  }
+
+  getUserDataJson(result) {
+    const displaydata = 'appname: ' + result.appname
+    + '\n\nappid: ' + result.uuid_appid
+    + '\n\niphoneid: ' + result.iphoneid
+    + '\n\nandroidid: ' + result.androidid
+    + '\n\ndeviceid: ' + result.deviceid
+    + '\n\nsubscriberid: ' + result.subscriberid
+    + '\n\nsimcardsn: ' + result.simcardsn
+    + '\n\nipaddress: ' + result.ipaddress
+    + '\n\nipaddress2: ' + result.ipaddress2
+    + '\n\nmacaddress: ' + result.macaddress
+    + '\n\ndevicename: ' + result.devicename
+    + '\n\nappversion: ' + result.appversion
+    + '\n\nsdk: ' + result.sdk
+    + '\n\nname: ' + result.name
+    + '\n\nph: ' + result.ph
+    + '\n\nemail: ' + result.email
+    + '\n\ncity: ' + result.city
+    + '\n\nstate: ' + result.state
+    + '\n\nctry: ' + result.ctry
+    + '\n\npc: ' + result.pc
+    + '\n\nlat: ' + result.lat
+    + '\n\nlng: ' + result.lng
+    + '\n\n';
+    alert(displaydata);
+  }
   showUserDataSuccess() {
     alert('success!');
   }
@@ -117,3 +155,4 @@ export class CordovaComponent implements OnInit {
   }
 
 }
+

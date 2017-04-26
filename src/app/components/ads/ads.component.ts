@@ -21,6 +21,9 @@ declare var $: any;
 })
 export class AdsComponent implements OnInit {
 
+
+  public bAnimate = false;
+
   public _zwidth: any;
   public _zheight: any;
   public randNum: number;

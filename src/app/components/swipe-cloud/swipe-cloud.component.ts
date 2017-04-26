@@ -27,6 +27,8 @@ export class SwipeCloudComponent implements OnInit, AfterViewInit, OnDestroy {
   public _wcloud: number;
   public _hcloud: number;
 
+  public canvas: any;
+
   @ViewChild('swipeCanvas') swipeCanvas: ElementRef;
 
   cloudID = 0;
@@ -40,6 +42,8 @@ export class SwipeCloudComponent implements OnInit, AfterViewInit, OnDestroy {
   _bgimage = 0;
   _drag = 'on';
   private sub: any; // -> Subscriber
+  public _scale = .1;
+  public zCentreFunc = 0;
 
   oopts = {
     shape: 'sphere',
@@ -95,7 +99,8 @@ export class SwipeCloudComponent implements OnInit, AfterViewInit, OnDestroy {
     shadow: '#000',
     shadowBlur: 1,
     shadowOffset: [1, 1],
-    // centreFunc: RCentreFunc,
+    centreFunc: this.Nop, // this.Nop,  // this.RSquare,
+    // centreImage: null, // './assets/js_fabric/tv1.png',
     splitWidth: 1,
     pinchZoom: true,
     outlineMethod: 'none'
@@ -176,12 +181,24 @@ export class SwipeCloudComponent implements OnInit, AfterViewInit, OnDestroy {
           //   this.cloudSpeed = _actionid;
           //   this.oopts.maxSpeed = _actionid;
           // }
+          // const _appid: any = params['appid'];
+          // const _name: any = params['name'];
+          // const _ph: any = params['ph'];
+          // const _email: any = params['email'];
+          // const _city: any = params['city'];
+          // const _state: any = params['state'];
+          // const _ctry: any = params['ctry'];
+          // const _pc: any = params['pc'];
+          // const _lat: any = params['lat'];
+          // const _lng: any = params['lng'];
         },
       (err) => { 
         console.log('error!', err);
       });
 
   } // end constructor
+
+  Nop() {}
 
   ngOnInit() {
     this.elementRef.nativeElement = '';
@@ -247,11 +264,20 @@ export class SwipeCloudComponent implements OnInit, AfterViewInit, OnDestroy {
 
   loadBackground() {
     let g = this.LocalStorage.get('settings_swipeclouds');
-    document.getElementById('swipeCanvas').style.backgroundColor = '#000000';
-    document.getElementById('swipeCanvas').style.backgroundImage = 'url(./assets/img/' + Config.DATA_BACKGROUNDS[g.bgimage] + ')';
-    document.getElementById('swipeCanvas').style.backgroundSize = 'cover'; // 100% 100%;
-    document.getElementById('swipeCanvas').style.cursor = 'pointer';
-    // $('swipeCanvas').css({ 'cursor': 'pointer' });
+
+    const video_test = Config.DATA_BACKGROUNDS[g.bgimage];
+    if(video_test === 'video1') {
+      document.getElementById('swipeCanvas').style.backgroundColor = 'transparent';
+      document.getElementById('swipeCanvas').style.backgroundSize = 'cover'; // 100% 100%;
+      document.getElementById('swipeCanvas').style.cursor = 'pointer';
+    } else {
+      document.getElementById('swipeCanvas').style.backgroundColor = '#000000';
+      document.getElementById('swipeCanvas').style.backgroundImage = 'url(./assets/img/' + Config.DATA_BACKGROUNDS[g.bgimage] + ')';
+      document.getElementById('swipeCanvas').style.backgroundSize = 'cover'; // 100% 100%;
+      document.getElementById('swipeCanvas').style.cursor = 'pointer';
+      // $('swipeCanvas').css({ 'cursor': 'pointer' });
+    }
+
   } // end loadBackground
 
   openDialogBox(textRef: string) { 
@@ -300,6 +326,18 @@ export class SwipeCloudComponent implements OnInit, AfterViewInit, OnDestroy {
     }
   }
 
+  InAppBuy(event, skuRef: string, formidRef: string) {
+    event.preventDefault();
+    this.cloudsrouter.navigate(['/inappbuy', {sku: skuRef, formid: formidRef}]);
+  }
+
+  CallTest(event, categoryRef: string) {
+    event.preventDefault();
+
+    this.cloudsrouter.navigate(['/blank']);
+
+  }
+
   ChessRoute(event, categoryRef: string) {
     event.preventDefault();
     // if(categoryRef === 'chess') {
@@ -319,12 +357,12 @@ export class SwipeCloudComponent implements OnInit, AfterViewInit, OnDestroy {
     return rc;
   }
 
-  loadBrowser(event, browserRef: string) {
+  loadBrowser(event, browserRef: string, pathRef: string) {
     event.preventDefault();
     $('[data-role=panel]').panel('close');
     // this.cloudsrouter.navigate(['/blank']);
     // setTimeout( () => {
-        this.cloudsrouter.navigate(['/browser', {name: 'chess', url: './assets/chess/chess.html'}]);
+        this.cloudsrouter.navigate(['/browser', {name: browserRef, url: pathRef}]);
     // }, 1);
   }
 
@@ -334,21 +372,48 @@ export class SwipeCloudComponent implements OnInit, AfterViewInit, OnDestroy {
     }
   }
 
-  // // this.cloudID = 0;
-  // // this.cloudShape = 'dblhelix';  //     this._shape = 'dblhelix';
-  // // this.cloudZoom = 1.0;   // zoomMin: 0.3, zoomMax: 3, zoomStep: 0.05
-  // // this.cloudSpeed = .04;  // minSpeed	0.0 maxSpeed	0.05
-  // this.loadCloud(this.cloudID,this.cloudShape,this.cloudZoom,this.cloudSpeed);
-  // 'app_name': 'swipeclouds',
-  // 'themeid': 'ios7light',
-  // 'bgimage': '../../img/bg_clouds.gif',
-  // 'cloudid': 0,   // this._cloudid
-  // 'shape': 'sphere',  // this._shape
-  // 'zoom': 1.0,   // this._zoom zoomMin: 0.3, zoomMax: 3, zoomStep: 0.05
-  // 'maxSpeed': .04,  // this._maxSpeed minSpeed	0.0 maxSpeed	0.05
-  // 'drag': 'on'  // this._drag
+  RSquare(c, w, h, cx, cy) {
+      let d = ((new Date).getTime() % 10000) * Math.PI / 2500;
+      c.setTransform(1, 0, 0, 1, 0, 0);
+      c.translate(cx, cy);
+      c.rotate(d);
+      c.globalAlpha = 1;
+      c.fillStyle = '#000';
+      c.fillRect(-50, -50, 100, 100);
+      c.fillStyle = '#fff';
+      c.fillRect(-40, -40, 80, 80);
+      c.fillStyle = '#000';
+      c.fillRect(-30, -30, 60, 60);
+      c.fillStyle = '#ff0';
+      c.fillRect(-20, -20, 40, 40);
+      c.beginPath();
+      c.moveTo(0, 0);
+      c.arc(0, 0, 15, 0, Math.PI / 2, 0);
+      c.lineTo(0, 0);
+      c.arc(0, 0, 15, Math.PI, 3 * Math.PI / 2, 0);
+      c.fillStyle = '#000';
+      c.fill();
+  }
 
+
+  RCentreFunc(c, w, h, cx, cy) {
+
+  }
 }
+
+// // this.cloudID = 0;
+// // this.cloudShape = 'dblhelix';  //     this._shape = 'dblhelix';
+// // this.cloudZoom = 1.0;   // zoomMin: 0.3, zoomMax: 3, zoomStep: 0.05
+// // this.cloudSpeed = .04;  // minSpeed	0.0 maxSpeed	0.05
+// this.loadCloud(this.cloudID,this.cloudShape,this.cloudZoom,this.cloudSpeed);
+// 'app_name': 'swipeclouds',
+// 'themeid': 'ios7light',
+// 'bgimage': '../../img/bg_clouds.gif',
+// 'cloudid': 0,   // this._cloudid
+// 'shape': 'sphere',  // this._shape
+// 'zoom': 1.0,   // this._zoom zoomMin: 0.3, zoomMax: 3, zoomStep: 0.05
+// 'maxSpeed': .04,  // this._maxSpeed minSpeed	0.0 maxSpeed	0.05
+// 'drag': 'on'  // this._drag
 
 // http://stackoverflow.com/questions/38572300/how-to-reload-refresh-the-component-view-forcefully
 // In this example I assume your Child Component is just one DOM object 

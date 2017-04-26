@@ -6,6 +6,8 @@ import { Http } from '@angular/http';
 import { GetPageService } from '../../services/get-page.service';
 import { LocalStorageService } from '../../services/local-storage.service';
 import { Routes, RouterModule, Router, ActivatedRoute, NavigationExtras } from '@angular/router';
+import { PlatformLocation } from '@angular/common';
+import { Location } from '@angular/common';
 
 declare var jQuery: any;
 declare var $: any;
@@ -37,7 +39,13 @@ export class BrowserComponent implements OnInit, AfterViewInit, OnDestroy {
         public _gps: GetPageService,
         private browserrouter: Router,
         private route: ActivatedRoute,
+        private location: PlatformLocation,
+        private _location: Location,
         private LocalStorage: LocalStorageService) {
+
+    location.onPopState(() => {
+        // alert('pressed back!');
+    });
 
     // this.zurl = './assets/data/lic.html';
     // this.zurl = './assets/chess/chess.html';
@@ -94,7 +102,9 @@ export class BrowserComponent implements OnInit, AfterViewInit, OnDestroy {
     // }
   }
 
-
+  backClicked() {
+      this._location.back();
+  }
 
   ngOnDestroy(): void {
     if (this._gps != null) {
