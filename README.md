@@ -6,11 +6,8 @@
 # NO React Native, NO Ionic, NO Flutter, NO Unnecessary 3rd-Party Frameworks!  #
 ## by William SerGio ##
 
-<ul class="download">
-	<li><a href="http://www.swipeclouds.com/down/src.zip">Download src - 4.5 MB</a></li>
-	<li><a href="http://www.swipeclouds.com/down/android_src.zip">Download android - 946.2 KB</a></li>
-	<li><a href="http://www.swipeclouds.com/down/www.zip">Download www - 4.7 MB</a></li>
-</ul>
+<p>You can download all the source code at:</p>
+http://www.codeproject.com/script/Articles/MemberArticles.aspx?amid=53972
 
 <img height="520px" src="/mobile-drawing-app/src/assets/swipeclouds.gif" width="264px" />
 
