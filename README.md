@@ -4,7 +4,7 @@
 # SwipeClouds® Angular Mobile App Video Framework #
 # Angular Mobile Apps for iPhone & Android #
 # NO React Native, NO Ionic, NO Flutter #
-## by Bill SerGio ##
+## by William SerGio ##
 
 <ul class="download">
 	<li><a href="http://www.swipeclouds.com/down/src.zip">Download src - 4.5 MB</a></li>
@@ -25,7 +25,7 @@
 - <span style="color: #FF0000">**NO**</span> **Framework 7**
 - <span style="color: #FF0000">**NO**</span> **Intel XDK**
 
-<img height="520px" src="http://www.swipeclouds.com/img/swipeclouds.gif" width="264px" />
+<img height="520px" src="/mobile-drawing-app/src/assets/swipeclouds.gif" width="264px" />
 
 # Old Frameworks NO Longer Needed #
   - **NO React Native**
@@ -71,7 +71,7 @@
 
 <p>To run the compiled code to see what the Angular Mobile App looks like just open the www.zip folder in Visual Studio as a website and you can see what the app looks like. Later, after you have created the project you can run it from Node.js. If you just want to see the working app I posted the compiled .apk file for Android on my website and you can just scan the QR Cod below to load swipeclouds.apk on your Android mobile phone.</p>
 
-<p><img height="100px" src="https://www.codeproject.com/KB/cross-platform/1175045/swipeclouds.gif" width="186px"></p>
+<p><img height="100px" src="/mobile-drawing-app/src/assets/swipeclouds.gif" width="186px"></p>
 
 <p>I believe that a first app in Angular should have all the basics and so this sample project includes in this app:</p>
 
