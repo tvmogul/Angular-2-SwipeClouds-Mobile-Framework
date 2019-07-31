@@ -58,14 +58,20 @@
  
 <p>We need to understand how mobile apps are created today. We start with a native language iPhone App and Android App that hosts a browser that displays a Web-based App on a company's server. Let's look at both teh iPhone and Android as follows:
 
-** SwipeClouds Native iPhone App **
+## Native iPhone App in SwipeClouds ##
+
+<p>We use Swift over Objective C in our native iPhone App. UIWebView is the now deprecated, but still available browser interface in xcode iOS apps for displaying web content. It has been replaced with WKWebView (which is what Safari uses) from iOS 8 onwards. You can also use the iOS9 SafariViewController. In our Native iPhone we make all 3 of these browser Interfaces available because, to date, UIWebView is still the most reliable in terms of running Angular 8 web-based apps.</p>
+
+<p>I have added a lot of pre-built components in my SwipeClouds using Swift UI. Swift UI is an interactive and revolutionary framework that will enable the Apple developers to develop and design apps for both iOS, MacOS, and tvOs. The Swift UI framework we have in SwipeClouds has tools and APIs to bring iPhone app solutions to Mac, and other Apple platforms while saving time and resources required. In my opinion, the Swift UI framework makes Google’s Flutter UI framework and Facebook’s React Native Frameworks OBSOLETE.</p>
   
-  
+## Native Android App in SwipeClouds ##
+
+
+
+
   I believe in eleminating as many 3rd-party components as possible and I have always liked the look and feel of JQuery Mobile and wanted to see how JQuery Mobile's styling would look in an Angular Mobile App where we let Angular control the DOM but take advantage of JQuery Mobile's cool Plugins and styling. You can easily ass Cordova or PhoneGap to this project. All the frameworks listed above like Ionic, etc. <strong>are all great frameworks </strong>that I have used for our clients BUT they are <strong>NOT </strong>needed to build a really cool, fully-functioning Angular Mobile App.. This article demonstrates how to use JQuery Plugins in an Angular Mobile App. For the main GUI in our Angular Mobile App I decided to use an amazing JavaScript canvas plugin by Graham Breach which I made some changes to for this project. &nbsp;For scrolling I used the JQuery plugin iScroll v4.2 by Matteo Spinelli. If you are tired of the same, boring look and feel of most mobile apps, then checkout my approach, which doesn't have any Ionic, or any of the third-party components listed above.</p>
 
 <p>To run the compiled code to see what the Angular Mobile App looks like just open the www.zip folder in Visual Studio as a website and you can see what the app looks like. Later, after you have created the project you can run it from Node.js. If you just want to see the working app I posted the compiled .apk file for Android on my website and you can just scan the QR Cod below to load swipeclouds.apk on your Android mobile phone.</p>
-
-<p><img height="100px" src="/mobile-drawing-app/src/assets/swipeclouds.gif" width="186px"></p>
 
 <p>I believe that a first app in Angular should have all the basics and so this sample project includes in this app:</p>
 
