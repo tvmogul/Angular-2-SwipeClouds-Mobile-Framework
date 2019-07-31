@@ -2,7 +2,8 @@
 <span id="ArticleContent">
 
 # SwipeClouds® Angular Mobile App Video Framework #
-# Angular Mobile Apps for iPhone & Android - NO React Native, NO Ionic, NO Flutter #
+# Angular Mobile Apps for iPhone & Android #
+# NO React Native, NO Ionic, NO Flutter #
 ## by Bill SerGio ##
 
 <ul class="download">
@@ -13,6 +14,7 @@
 
 # Angular 2 &amp; JQuery Mobile #
 - <span style="color: #FF0000">**NO**</span> **Ionic**	
+- <span style="color: #FF0000">**NO**</span> **React Native**
 - <span style="color: #FF0000">**NO**</span> **Onsen UI**	
 - <span style="color: #FF0000">**NO**</span> **TopCoat**	
 - <span style="color: #FF0000">**NO**</span> **ng2-Bootstrap**
@@ -26,8 +28,8 @@
 <img height="520px" src="http://www.swipeclouds.com/img/swipeclouds.gif" width="264px" />
 
 # Old Frameworks NO Longer Needed #
+  - **NO React Native**
   - **NO Ionic**
-  - **NO React Native**	
   - **NO Intel XDK**
   - **NO Onsen UI**	
   - **NO Trigger.IO**
@@ -65,11 +67,11 @@
 
 ## Introduction ##
 
-<p>I have always liked the look and feel of JQuery Mobile and wanted to see how JQuery Mobile's styling would look in an Angular Mobile App where we let Angular2 control the DOM but take advantage of JQuery Mobile's cool Plugins and styling. You can easily ass Cordova or PhoneGap to this project. All the frameworks listed above like Ionic, etc. <strong>are all great frameworks </strong>that I have used for our clients BUT they are <strong>NOT </strong>needed to build a really cool, fully-functioning Angular2 Mobile App.. This article demonstrates how to use JQuery Plugins in an Angular Mobile App. For the main GUI in our Angular2 Mobile App I decided to use an amazing JavaScript canvas plugin by Graham Breach which I made some changes to for this project. &nbsp;For scrolling I used the JQuery plugin iScroll v4.2 by Matteo Spinelli. If you are tired of the same, boring look and feel of most mobile apps, then checkout my approach, which doesn't have any Ionic, or any of the third-party components listed above.</p>
+<p>I have always liked the look and feel of JQuery Mobile and wanted to see how JQuery Mobile's styling would look in an Angular Mobile App where we let Angular control the DOM but take advantage of JQuery Mobile's cool Plugins and styling. You can easily ass Cordova or PhoneGap to this project. All the frameworks listed above like Ionic, etc. <strong>are all great frameworks </strong>that I have used for our clients BUT they are <strong>NOT </strong>needed to build a really cool, fully-functioning Angular Mobile App.. This article demonstrates how to use JQuery Plugins in an Angular Mobile App. For the main GUI in our Angular Mobile App I decided to use an amazing JavaScript canvas plugin by Graham Breach which I made some changes to for this project. &nbsp;For scrolling I used the JQuery plugin iScroll v4.2 by Matteo Spinelli. If you are tired of the same, boring look and feel of most mobile apps, then checkout my approach, which doesn't have any Ionic, or any of the third-party components listed above.</p>
 
-<p>To run the compiled code to see what the Angular2 Mobile App looks like just open the www.zip folder in Visual Studio as a website and you can see what the app looks like. Later, after you have created the project you can run it from Node.js. If you just want to see the working app I posted the compiled .apk file for Android on my website and you can just scan the QR Cod below to load swipeclouds.apk on your Android mobile phone.</p>
+<p>To run the compiled code to see what the Angular Mobile App looks like just open the www.zip folder in Visual Studio as a website and you can see what the app looks like. Later, after you have created the project you can run it from Node.js. If you just want to see the working app I posted the compiled .apk file for Android on my website and you can just scan the QR Cod below to load swipeclouds.apk on your Android mobile phone.</p>
 
-<p><img height="100px" src="http://www.swipeclouds.com/img/dn_android.png" width="186px"></p>
+<p><img height="100px" src="https://www.codeproject.com/KB/cross-platform/1175045/swipeclouds.gif" width="186px"></p>
 
 <p>I believe that a first app in Angular should have all the basics and so this sample project includes in this app:</p>
 
@@ -150,7 +152,7 @@ npm config set registry "http://registry.npmjs.org"
 npm config set strict-ssl false
 </pre>
 
-<h2><strong>Angular2 CLI</strong></h2>
+<h2><strong>Angular CLI</strong></h2>
 
 <p>I like the speed of development with Angular CLI but I dislike how buggy it is to work with at this time. I really dislike companies like Google telling me what my app should look like or what IDE I should use. The purpose of this article is to walk beginners through creating an Angular App using CLI so let's start.</p>
 
@@ -173,7 +175,7 @@ npm config set strict-ssl false
 
 ## Create Our Angular Mobile App ##
 
-<p>Now that you have Angular CLI installed, you can generate an Angular2 Mobile App: Then create a directory for your Angular2 projects. On my computer I have a directory called "Angular." From inside that directory using the <b>CMD prompt in administrator mod</b>e create your "first-app" as follows:</p>
+<p>Now that you have Angular-CLI installed, you can generate an Angular Mobile App: Then create a directory for your Angular projects. On my computer I have a directory called "Angular." From inside that directory using the <b>CMD prompt in administrator mod</b>e create your "first-app" as follows:</p>
 
     Select a folder - I used C:\Angular
     C:\Angular&gt;ng new first-app --routing--style=scss
@@ -190,7 +192,7 @@ npm config set strict-ssl false
 
     C:\Angular&gt;first-app&gt;ng serve
 
-<p>This will start our Node.js server running on port 4200 so if you open your Chrome Web Browser to http://localhost:4200 you will see the application running. This will run the default Angular2 app that comes with Angular-CLI.</p>
+<p>This will start our Node.js server running on port 4200 so if you open your Chrome Web Browser to http://localhost:4200 you will see the application running. This will run the default Angular app that comes with Angular-CLI.</p>
 
 ## What Can Wrong When You Run The App? ##
 
@@ -226,7 +228,7 @@ ahead-of-time compilation also known as offline compilation.
 
 ## Routing in Our Angular Mobile App ##
 
-<p>We have only a few simple views in our app, namely, swipe-clouds, video, legal, cordova, and blank. In the VideoView the user can select videos to watch in the responsive Angular2 video Player contained in the video view. And blank is used as a fudge to keep down the codding.</p>
+<p>We have only a few simple views in our app, namely, swipe-clouds, video, legal, cordova, and blank. In the VideoView the user can select videos to watch in the responsive Angular video Player contained in the video view. And blank is used as a fudge to keep down the codding.</p>
 
     // We have three real views and one fake view, i.e., blank:
     let NavigationExtras: Array;
@@ -627,7 +629,7 @@ own custom scrollbar.</p>
 
 <p>I included 3 Cordova Plugins with full Java Souirce Code in this project. You DO NOT have to include these plugins in your own project. If you do want to add these Cordova Plugins then download the <strong>android&nbsp;file </strong>at the top of this article and which includes the Java Source Code for the 2 Cordova Plugins below and add that to Android Studio. Notice that since we are adding the Java Source Code directly to Android Studio for these plugins all we need to call them is to use "cordova.exec" in javascript.</p>
 
-<p>Clicking on a floating image in the swipecloud can directly launch a Cordova Plugin. But for the purposes of illustrating the Cordova Plugins in the attached sample Anuglar 2 Mobile App I thought I would create a scrolling list of all of the included Cordova Plugins from an array that describes the 2 plugins in our app as shown below.</p>
+<p>Clicking on a floating image in the swipecloud can directly launch a Cordova Plugin. But for the purposes of illustrating the Cordova Plugins in the attached sample Anuglar 2 Mobile App I thought I would create a scrolling list of all of the included Cordova Plugins from an array that describes the plugins in our app as shown below.</p>
 
     this.cordovatools  = [
     {
