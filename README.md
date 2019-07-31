@@ -1,7 +1,8 @@
 <!-- Start Article -->
 <span id="ArticleContent">
 
-# SwipeClouds® Angular2 Mobile App Framework #
+# SwipeClouds® Angular Mobile App Video Framework #
+# Angular Mobile Apps for iPhone & Android - NO React Native, NO Ionic, NO Flutter #
 ## by Bill SerGio ##
 
 <ul class="download">
@@ -23,34 +24,54 @@
 - <span style="color: #FF0000">**NO**</span> **Intel XDK**
 
 <img height="520px" src="http://www.swipeclouds.com/img/swipeclouds.gif" width="264px" />
+
+# Old Frameworks NO Longer Needed #
+  - **NO Ionic**
+  - **NO React Native**	
+  - **NO Intel XDK**
+  - **NO Onsen UI**	
+  - **NO Trigger.IO**
+  - **NO ng2-Bootstrap**	
+  - **NO TopCoat**
+  - **NO Sencha Touch**	
+  - **NO NativeScript**
+  - **NO Angular UI**
+  - **NO Flutter**	
+  - **NO Framework 7**
+  - **NO Kendo UI**
+  - **NO Xamarin**
+  
 # A Few Features Included #
 
 ## 
-- **How to Use JQuery Plugins in Angular2**
+- **Ability to Stream Video to Smart TV Sets**
+- **Facial ID & TouchID for BOTH iPhone & Android**
+- **Plays 3-D Video on BOTH iPhone & Android**
+- **Encryption for Passwords That NOBODY Can Crack**
+- **How to Use JQuery Plugins in Angular**
 - **Cool Animated Canvas Backgrounds**
 - **JSONP & Observables for Remote Data**
 - **Pinch Clouds to Expand & Contract**
-- **Angular2 Component Plays Embedded Videos**
+- **Angular Component Plays Embedded Videos**
 - **Delivers Targeted Ads Based on Zip Code Radius**
 - **Allows Use of Full-Featured SASS**
-- **Angular2 ListView, Toolbar & NavBar**
+- **Angular ListView, Toolbar & NavBar**
 - **iOS7 Frosted Panels & HTML Games Like Chess**
-- **Angular2 Dialog Popup Component**
+- **Angular Dialog Popup Component**
 - **BarCode Scanner, UnserData & Compass Plugins**
-- **Angular2 LocalStorage Component**
-- **How to Load External Website Using Angular2**
-- **Angular2 Back Button for External Sites**
-- **Ability to Stream Video to Smart TV Sets** ##
+- **Angular LocalStorage Component**
+- **How to Load External Website Using Angular**
+- **Angular Back Button for External Sites** ##
 
 ## Introduction ##
 
-<p>I have always liked the look and feel of JQuery Mobile and wanted to see how JQuery Mobile's styling would look in an Angular2 Mobile App where we let Angular2 control the DOM but take advantage of JQuery Mobile's cool Plugins and styling. You can easily ass Cordova or PhoneGap to this project. All the frameworks listed above like Ionic, etc. <strong>are all great frameworks </strong>that I have used for our clients BUT they are <strong>NOT </strong>needed to build a really cool, fully-functioning Angular2 Mobile App.. This article demonstrates how to use JQuery Plugins in an Angular2 Mobile App. For the main GUI in our Angular2 Mobile App I decided to use an amazing JavaScript canvas plugin by Graham Breach which I made some changes to for this project. &nbsp;For scrolling I used the JQuery plugin iScroll v4.2 by Matteo Spinelli. If you are tired of the same, boring look and feel of most mobile apps, then checkout my approach, which doesn't have any Ionic, or any of the third-party components listed above.</p>
+<p>I have always liked the look and feel of JQuery Mobile and wanted to see how JQuery Mobile's styling would look in an Angular Mobile App where we let Angular2 control the DOM but take advantage of JQuery Mobile's cool Plugins and styling. You can easily ass Cordova or PhoneGap to this project. All the frameworks listed above like Ionic, etc. <strong>are all great frameworks </strong>that I have used for our clients BUT they are <strong>NOT </strong>needed to build a really cool, fully-functioning Angular2 Mobile App.. This article demonstrates how to use JQuery Plugins in an Angular Mobile App. For the main GUI in our Angular2 Mobile App I decided to use an amazing JavaScript canvas plugin by Graham Breach which I made some changes to for this project. &nbsp;For scrolling I used the JQuery plugin iScroll v4.2 by Matteo Spinelli. If you are tired of the same, boring look and feel of most mobile apps, then checkout my approach, which doesn't have any Ionic, or any of the third-party components listed above.</p>
 
 <p>To run the compiled code to see what the Angular2 Mobile App looks like just open the www.zip folder in Visual Studio as a website and you can see what the app looks like. Later, after you have created the project you can run it from Node.js. If you just want to see the working app I posted the compiled .apk file for Android on my website and you can just scan the QR Cod below to load swipeclouds.apk on your Android mobile phone.</p>
 
 <p><img height="100px" src="http://www.swipeclouds.com/img/dn_android.png" width="186px"></p>
 
-<p>I believe that a first app in Angular 2 should have all the basics and so this sample project includes in this app:</p>
+<p>I believe that a first app in Angular should have all the basics and so this sample project includes in this app:</p>
 
 <ul>
 	<li>SwipeClouds Interface</li>
@@ -58,21 +79,21 @@
 	<li>Super Good <strong>Chess</strong> Game</li>
 	<li>Internal Browser for loading Local &amp; Remote html</li>
 	<li>iOS7 Frosted Panels, Toolbars &amp; Navbars</li>
-	<li><strong>Cordova Barcode Scanner</strong> (Full JavaScript &amp; Java Code)</li>
-	<li><strong>Cordova Compass</strong> (5 Compasses &amp; Full JavaScript &amp; Java Code)</li>
-	<li><strong>Cordova User Data Scrapper</strong>&nbsp;(Full JavaScript &amp; Java Code)</li>
+	<li><strong>Barcode Scanner</strong> (Full JavaScript &amp; Java Code)</li>
+	<li><strong>Multiple Compasses</strong> (5 Compasses &amp; Full JavaScript &amp; Java Code)</li>
+	<li><strong>User Data Scrapper & Targeted Niche TV Commercials Delivery</strong>&nbsp;(Full JavaScript &amp; Java & Swift Code)</li>
 </ul>
 
-<p>Creating powerful Angular 2 Mobile Apps is fast and easy. You just run Angular CLI and then unzip the src.zip file above and copy the contents into the "src" directory created by the CLI and you have all the features above ready to go with full source code---WOW! If you would like to download the compiled Android apk file you can find that on my SwipeClouds website at: <a href="http://www.swipeclouds.com/" target="_blank">http://www.swipeclouds.com</a></p>
+<p>Creating powerful Angular Mobile Apps is fast and easy. You just run Angular CLI and then unzip the src.zip file above and copy the contents into the "src" directory created by the CLI and you have all the features above ready to go with full source code---WOW! If you would like to download the compiled Android apk file you can find that on my SwipeClouds website at: <a href="http://www.swipeclouds.com/" target="_blank">http://www.swipeclouds.com</a></p>
 
 ## Main GUI - Pinch to Size Cloud ##
 
-<p>The main GUI is a SwipeCloud of floating images and you can swirl this cloud by swiping any of the images with your finger. Pinching the SwipeCloud with your fingers will increase and decrease the size of the SwipeCloud. This SwipeCloud is the main means of navigation for the Angular2 Mobile App and clicking on any of the images in the SwipeCloud will load a different view, which, in most cases will load the VideoComponent View for that particular group of video feeds from any tube server that allows embedding.</p>
+<p>The main GUI is a SwipeCloud of floating images and you can swirl this cloud by swiping any of the images with your finger. Pinching the SwipeCloud with your fingers will increase and decrease the size of the SwipeCloud. This SwipeCloud is the main means of navigation for the Angular Mobile App and clicking on any of the images in the SwipeCloud will load a different view, which, in most cases will load the VideoComponent View for that particular group of video feeds from any tube server that allows embedding.</p>
 
 <img height="384px" src="http://www.swipeclouds.com/img/pinch.gif" width="200px" />
 
 
-Angular 2 Mobile App with a Very Different Look &amp; Feel<br>
+Angular Mobile App with a Very Different Look &amp; Feel<br>
 with A Novel Approach to Navigation. JQuery has a lot of<br>
 really cool, already-built CANVAS plugins like SwipeClouds<br>
 
@@ -131,7 +152,7 @@ npm config set strict-ssl false
 
 <h2><strong>Angular2 CLI</strong></h2>
 
-<p>I like the speed of development with Angular2 CLI but I dislike how buggy it is to work with at this time. I really dislike companies like Google telling me what my app should look like or what IDE I should use. The purpose of this article is to walk beginners through creating an Angular 2 App using CLI so let's start.</p>
+<p>I like the speed of development with Angular CLI but I dislike how buggy it is to work with at this time. I really dislike companies like Google telling me what my app should look like or what IDE I should use. The purpose of this article is to walk beginners through creating an Angular App using CLI so let's start.</p>
 
 <p>Install Angular CLI which will also install Angular's "ng" command globally on your system:</p>
 
@@ -150,12 +171,12 @@ npm config set strict-ssl false
     node: 7.4.0
     os: win32 x64
 
-## Create Our Angular2 Mobile App ##
+## Create Our Angular Mobile App ##
 
-<p>Now that you have Angular CLI installed, you can generate an Angular2 Mobile App: Then create a directory for your Angular2 projects. On my computer I have a directory called "Angular2." From inside that directory using the <b>CMD prompt in administrator mod</b>e create your "first-app" as follows:</p>
+<p>Now that you have Angular CLI installed, you can generate an Angular2 Mobile App: Then create a directory for your Angular2 projects. On my computer I have a directory called "Angular." From inside that directory using the <b>CMD prompt in administrator mod</b>e create your "first-app" as follows:</p>
 
-    Select a folder - I used C:\Angular2
-    C:\Angular2&gt;ng new first-app --routing--style=scss
+    Select a folder - I used C:\Angular
+    C:\Angular&gt;ng new first-app --routing--style=scss
 
 ## Installing &amp; Using Visual Studio Code IDE ##
 
@@ -165,11 +186,11 @@ npm config set strict-ssl false
 
 <p><img height="319px" src="http://www.swipeclouds.com/img/ngbuild.jpg" width="474px"></p>
 
-<p>Then run the default app installed by Angular2-CLI as follows:</p>
+<p>Then run the default app installed by Angular-CLI as follows:</p>
 
-    C:\Angular2&gt;first-app&gt;ng serve
+    C:\Angular&gt;first-app&gt;ng serve
 
-<p>This will start our Node.js server running on port 4200 so if you open your Chrome Web Browser to http://localhost:4200 you will see the application running. This will run the default Angular2 app that comes with Angular2 CLI.</p>
+<p>This will start our Node.js server running on port 4200 so if you open your Chrome Web Browser to http://localhost:4200 you will see the application running. This will run the default Angular2 app that comes with Angular-CLI.</p>
 
 ## What Can Wrong When You Run The App? ##
 
@@ -177,17 +198,17 @@ npm config set strict-ssl false
 
 <p><img height="444px" src="http://www.swipeclouds.com/img/run_cordova.jpg" width="469px"></p>
 
-## How to Compile Angular2 Apps as Mobile Apps Using Ahead-oF-Time Compilation (aot) ##
+## How to Compile Angular Apps as Mobile Apps Using Ahead-oF-Time Compilation (aot) ##
 
 <p>Next we will add the source code for the source code for our mobile app to this default project. Download the zipped <strong>src.zip</strong> file posted above and empty the contents of the zipped "src" folder&nbsp;into the src folder of the project. &nbsp;And again run the command:</p>
 
-    C:\Angular2&gt;first-app&gt;ng serve
+    C:\Angular&gt;first-app&gt;ng serve
 
-<p>I will jump ahead here to explain how to build your "www" folder for mobile. The BIG SECRET to compiling an Angular 2 App for Mobile that isn't obvious. To build an Angular 2 App so it will work as a Mobile App in XCODE or Android Studio is setting up the pathways correctly. Look at the index.html from the "src" folder you added to the project and notice the following:</p>
+<p>I will jump ahead here to explain how to build your "www" folder for mobile. The BIG SECRET to compiling an Angular App for Mobile that isn't obvious. To build an Angular App so it will work as a Mobile App in XCODE or Android Studio is setting up the pathways correctly. Look at the index.html from the "src" folder you added to the project and notice the following:</p>
 
     &lt;script&gt;document.write('&lt;base href="' + document.location + '" /&gt;');&lt;script&gt;
 
-<p>Next we want to bundle our Angular 2 Mobile App for importing into XCODE (iPhone) or Android Studio. I will just discuss Android Studio here to keep this article shot since XCODE is very similar. Bundles are generated by default to:
+<p>Next we want to bundle our Angular Mobile App for importing into XCODE (iPhone) or Android Studio. I will just discuss Android Studio here to keep this article shot since XCODE is very similar. Bundles are generated by default to:
 
     projectFolder/dist/
 
@@ -203,7 +224,7 @@ ahead-of-time compilation also known as offline compilation.
 
 <p>In the pathway above you will notice that I created a folder "Angular" on my "C" drive and created my "first-app" folder inside that directory. If you have your project in a different folder then adjust the pathway above accordingly. The contents of the generated "www" folder will go into our "www" folder in Android Studio and all the pathways will actually work. **Viola!**</p>
 
-## Routing in Our Angular2 Mobile App ##
+## Routing in Our Angular Mobile App ##
 
 <p>We have only a few simple views in our app, namely, swipe-clouds, video, legal, cordova, and blank. In the VideoView the user can select videos to watch in the responsive Angular2 video Player contained in the video view. And blank is used as a fudge to keep down the codding.</p>
 
@@ -220,7 +241,7 @@ ahead-of-time compilation also known as offline compilation.
     ];
 
 
-## local-storage.service.ts in Angular 2 ##
+## local-storage.service.ts in Angular ##
 
 For use throughout our mobile app to pass data I decided to use localstorage so I created this simple class for localstorage that imports Injectable. So when you see references to localstorage we are just calling this class in our app. 
 
@@ -237,15 +258,15 @@ For use throughout our mobile app to pass data I decided to use localstorage so 
     ... etc
 
 
-## Using JQuery &amp; JQuery Plugins in Angular2 ##
+## Using JQuery &amp; JQuery Plugins in Angular ##
 
-<p>There are several ways to add JQuery and JQuery Mobile to Angular2 but I use a simple one that has always worked for me. I place the links right inside the header of the index.html file and all of the supporting .js files and .css files inside the "assets" folder in the project.</p>
+<p>There are several ways to add JQuery and JQuery Mobile to Angular but I use a simple one that has always worked for me. I place the links right inside the header of the index.html file and all of the supporting .js files and .css files inside the "assets" folder in the project.</p>
 
-## The Angular2 SwipeCloudComponent Canvas ##
+## The Angular SwipeCloudComponent Canvas ##
 
-<p>To create this Angular2 component we use Microsoft's Typescript as follows: To do this we move into our "components" folder and generate the basic files using the command below in another instance of our Integrated Terminal Window.</p>
+<p>To create this Angular component we use Microsoft's Typescript as follows: To do this we move into our "components" folder and generate the basic files using the command below in another instance of our Integrated Terminal Window.</p>
 
-    C:\Angular2&gt;first-app&gt;src&gt;app&gt;components&gt;ng generate component swipe-cloud
+    C:\Angular&gt;first-app&gt;src&gt;app&gt;components&gt;ng generate component swipe-cloud
 
 <p>And in our typescript file, swipe-cloud.component.ts, we add our canvas and JQuery with a simple declaration at the top of this file as follows:</p>
 
@@ -334,7 +355,7 @@ nextCloud(event) {
     }
 
 
-## The Angular2 VideoComponent ##
+## The Angular VideoComponent ##
 
 <p>The VideoComponent will retrieve video feeds from the hundreds of tube servers that allow embedding in web pages. The structure for our feeds is as follows:</p>
 
@@ -448,7 +469,7 @@ nextCloud(event) {
     }
 
 
-<p>Some people may have trouble getting JSONP to work so I will explain some of the things you need to know. You can run a JSONP server easily on your server with a few lines of PHP code or you can use C# .NET etc. The design concept I used was that instead of having multiple generic handlers or a single handler with lots of switch/if statement I decided to use a single generic handler with Factory design pattern. The Factory returns a class based upon the methodName that is passed which is used to only handle that request. The Factory reads the methodName and its class from the web.config file and instantiates the handler. The generic handler requests the Factory for the handler and performs some pre/post processing. Here is a link to an article I wrote on creating a JSONP server using C# .NET which is what I used in testing the JSONP code in this Angular2 Mobile App:</p>
+<p>Some people may have trouble getting JSONP to work so I will explain some of the things you need to know. You can run a JSONP server easily on your server with a few lines of PHP code or you can use C# .NET etc. The design concept I used was that instead of having multiple generic handlers or a single handler with lots of switch/if statement I decided to use a single generic handler with Factory design pattern. The Factory returns a class based upon the methodName that is passed which is used to only handle that request. The Factory reads the methodName and its class from the web.config file and instantiates the handler. The generic handler requests the Factory for the handler and performs some pre/post processing. Here is a link to an article I wrote on creating a JSONP server using C# .NET which is what I used in testing the JSONP code in this Angular Mobile App:</p>
 
 <p><b><a href="http://www.software-rus.com/articles/articles.html?article=JSONPMobileHandler" target="_blank">C# .NET JSONP Server</a> Most people have problems getting this one part of the url correct:</b></p>
 
@@ -457,7 +478,7 @@ nextCloud(event) {
 
 <p>Look at the "jsonp" in the line above - the letters is determined by your JSONP sever and will vary from server to server. In my C# JSONP Server I used "jsonp" but you will also see in other servers "callback", or just "c" </b>but its value is based on the server. In other words, don't just use what you commonly see in articles like "callback" but check to see what the JSONP server you are connecting to requires.</p>
 
-## The Angular 2 ListView ##
+## The Angular ListView ##
 
 <p>This is pretty straightforward and we simply use *ngFor to create our ListView in our Video component as follows:</p>
 
@@ -474,7 +495,7 @@ nextCloud(event) {
 
 <p>Unlike most listviews I decided to place the Click on the image in the row INSTEAD of the row itself so that I can easily move the list up and down without accidentally click the row.</p>
 
-## Playing Embed Videos in Angular 2 ##
+## Playing Embed Videos in Angular ##
 
 <p>This is pretty straightforward and we simply use <b> bypassSecurityTrustResourceUrl </b>in our Video component to retrieve a safe "url" object as follows:</p>
 
@@ -492,7 +513,7 @@ nextCloud(event) {
     } 
 
 
-<p>I created a Angular2 Tabbed NavBar Component, namely, VideoNavbarComponent, and for our Video Component we have Prev and Net Tabs that work as shown below to next the next group of videos from out JSONP Server:</p>
+<p>I created a Angular Tabbed NavBar Component, namely, VideoNavbarComponent, and for our Video Component we have Prev and Net Tabs that work as shown below to next the next group of videos from out JSONP Server:</p>
 
     &lt;li type="button" class="bcolor_red"&gt;&lt;a (click)="<b>prev</b>($event, '<b>prev</b>')" data-icon="arrow-l"&gt;Prev&lt;/a&gt;
     &lt;li type="button" class="bcolor_blue"&gt;&lt;a (click)="<b>next</b>($event, '<b>next</b>')" data-icon="arrow-r"&gt;Next&lt;/a&gt;
@@ -513,7 +534,7 @@ nextCloud(event) {
 
 ## BrowserComponent, Chess &amp; HTML5 ##
 
-<p>I also added to this Angular 2 Mobile App a fantastic html Chess Game Stefano Gioffre. The big advantage to adding JQuery to Angular 2 is that there are hundreds of cool html games like chess that can be easily dropped into the sample project by simply loading them into an iFrame. So I decided to add a BrowserComponet that contains an iFrame in the html as shown below that can be loaded with local or remote web page.</p>
+<p>I also added to this Angular Mobile App a fantastic html Chess Game Stefano Gioffre. The big advantage to adding JQuery to Angular 2 is that there are hundreds of cool html games like chess that can be easily dropped into the sample project by simply loading them into an iFrame. So I decided to add a BrowserComponet that contains an iFrame in the html as shown below that can be loaded with local or remote web page.</p>
 
     &lt;iframe id="iframe" name="iframe" [src]='page' scrolling="yes"
     marginheight="0" frameborder="0" webkitallowfullscreen
@@ -704,14 +725,16 @@ declare var cordova: any;
 
 ## Cordova Compass Plugin ##
 
-<p>In the Cordova Compasses Plugin I created for this project I created 5 different types of compasses you can select from the menu as shown below.</p>
+<p>In the Compasses Plugin I created for this project I created 5 different types of compasses you can select from the menu as shown below.</p>
 
 <p><img height="450px" src="http://www.swipeclouds.com/img/plugin_compass.jpg" style="color: rgb(255, 153, 0); font-size: 29px" width="563px"></p>
 
 ## Final Thoughts ##
 
-<p>Angular 2 is very easy to learn and work with to rapidly create Angular 2 Mobile Apps. And, best of all, you don't need any third-party frameworks like Ionic, Onsen, Nativescript, etc. JQuery Mobile does a great job for the GUI and there are plenty of JQuery plugins you can just use as is..</p>
+<p>Angular is very easy to learn and work with to rapidly create Angular Mobile Apps. And, best of all, you don't need any third-party frameworks like Ionic, Onsen, Nativescript, etc. JQuery Mobile does a great job for the GUI and there are plenty of JQuery plugins you can just use as is..</p>
 
+<p>Cordova is completely unnecessary since both our iPhone App and Android App have a bridge allowing full two-way communition from and to JavaScript to the Native language code.</>
+  
 <p>If you would like to download the compiled Android apk file you can find that on my website at: <a href="http://www.swipeclouds.com/" target="_blank">http://www.swipeclouds.com</a></p>
 
 <p>&nbsp;</p>
