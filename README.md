@@ -12,19 +12,6 @@
 	<li><a href="http://www.swipeclouds.com/down/www.zip">Download www - 4.7 MB</a></li>
 </ul>
 
-# Angular 2 &amp; JQuery Mobile #
-- <span style="color: #FF0000">**NO**</span> **Ionic**	
-- <span style="color: #FF0000">**NO**</span> **React Native**
-- <span style="color: #FF0000">**NO**</span> **Onsen UI**	
-- <span style="color: #FF0000">**NO**</span> **TopCoat**	
-- <span style="color: #FF0000">**NO**</span> **ng2-Bootstrap**
-- <span style="color: #FF0000">**NO**</span> **Sencha Touch**
-- <span style="color: #FF0000">**NO**</span> **NativeScript**
-- <span style="color: #FF0000">**NO**</span> **Trigger.IO**
-- <span style="color: #FF0000">**NO**</span> **Angular UI**
-- <span style="color: #FF0000">**NO**</span> **Framework 7**
-- <span style="color: #FF0000">**NO**</span> **Intel XDK**
-
 <img height="520px" src="/mobile-drawing-app/src/assets/swipeclouds.gif" width="264px" />
 
 # Old Frameworks NO Longer Needed #
