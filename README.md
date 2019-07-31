@@ -1,9 +1,9 @@
 <!-- Start Article -->
 <span id="ArticleContent">
 
-# SwipeClouds® Angular Mobile App Video Framework #
-# Angular Native Language Mobile Apps for iPhone(Swift) & Android(Java) #
-# NO React Native, NO Ionic, NO Flutter #
+# SwipeClouds® Angular 8 Mobile App Video Framework #
+# Angular 8 Native Language Mobile Apps for iPhone(Swift) & Android(Java) #
+# NO React Native, NO Ionic, NO Flutter, NO Unnecessary 3rd-Party Frameworks!  #
 ## by William SerGio ##
 
 <ul class="download">
@@ -54,9 +54,14 @@
 
 ## Introduction ##
 
-<p>Frameworks like React Native and Ionic are completelty unnecessary and only add unwanted size and maintenence with each new release. I am an expert in every Mobile Framework like React Native, Ionic, Cordova, PhoneGap, etc. and I have written over hundreds of app in these frameworks like React Native for Clients who were misinformed into thinking that they wanted a "uniform look and approach to coding" which isn't the case with any of these old and unnecessary frameworks.</p>
+<p>In my opinion, frameworks like React Native and Ionic are completelty unnecessary and only add unwanted size and maintenence with each new release. I am an expert in every Mobile Framework like React Native, Ionic, Cordova, PhoneGap, etc. and I have written hundreds of apps in these frameworks like React Native for Clients who were misinformed into thinking that they wanted a "uniform look and approach to coding" which isn't the case with any of these old and unnecessary frameworks.</p>
  
-<p>I believe in eleminating as many 3rd-party components as possible and I have always liked the look and feel of JQuery Mobile and wanted to see how JQuery Mobile's styling would look in an Angular Mobile App where we let Angular control the DOM but take advantage of JQuery Mobile's cool Plugins and styling. You can easily ass Cordova or PhoneGap to this project. All the frameworks listed above like Ionic, etc. <strong>are all great frameworks </strong>that I have used for our clients BUT they are <strong>NOT </strong>needed to build a really cool, fully-functioning Angular Mobile App.. This article demonstrates how to use JQuery Plugins in an Angular Mobile App. For the main GUI in our Angular Mobile App I decided to use an amazing JavaScript canvas plugin by Graham Breach which I made some changes to for this project. &nbsp;For scrolling I used the JQuery plugin iScroll v4.2 by Matteo Spinelli. If you are tired of the same, boring look and feel of most mobile apps, then checkout my approach, which doesn't have any Ionic, or any of the third-party components listed above.</p>
+<p>We need to understand how mobile apps are created today. We start with a native language iPhone App and Android App that hosts a browser that displays a Web-based App on a company's server. Let's look at both teh iPhone and Android as follows:
+
+** SwipeClouds Native iPhone App **
+  
+  
+  I believe in eleminating as many 3rd-party components as possible and I have always liked the look and feel of JQuery Mobile and wanted to see how JQuery Mobile's styling would look in an Angular Mobile App where we let Angular control the DOM but take advantage of JQuery Mobile's cool Plugins and styling. You can easily ass Cordova or PhoneGap to this project. All the frameworks listed above like Ionic, etc. <strong>are all great frameworks </strong>that I have used for our clients BUT they are <strong>NOT </strong>needed to build a really cool, fully-functioning Angular Mobile App.. This article demonstrates how to use JQuery Plugins in an Angular Mobile App. For the main GUI in our Angular Mobile App I decided to use an amazing JavaScript canvas plugin by Graham Breach which I made some changes to for this project. &nbsp;For scrolling I used the JQuery plugin iScroll v4.2 by Matteo Spinelli. If you are tired of the same, boring look and feel of most mobile apps, then checkout my approach, which doesn't have any Ionic, or any of the third-party components listed above.</p>
 
 <p>To run the compiled code to see what the Angular Mobile App looks like just open the www.zip folder in Visual Studio as a website and you can see what the app looks like. Later, after you have created the project you can run it from Node.js. If you just want to see the working app I posted the compiled .apk file for Android on my website and you can just scan the QR Cod below to load swipeclouds.apk on your Android mobile phone.</p>
 
