@@ -2,7 +2,7 @@
 <span id="ArticleContent">
 
 # SwipeClouds® Angular Mobile App Video Framework #
-# Angular Mobile Apps for iPhone & Android #
+# Angular Native Language Mobile Apps for iPhone(Swift) & Android(Java) #
 # NO React Native, NO Ionic, NO Flutter #
 ## by William SerGio ##
 
@@ -54,7 +54,9 @@
 
 ## Introduction ##
 
-<p>I have always liked the look and feel of JQuery Mobile and wanted to see how JQuery Mobile's styling would look in an Angular Mobile App where we let Angular control the DOM but take advantage of JQuery Mobile's cool Plugins and styling. You can easily ass Cordova or PhoneGap to this project. All the frameworks listed above like Ionic, etc. <strong>are all great frameworks </strong>that I have used for our clients BUT they are <strong>NOT </strong>needed to build a really cool, fully-functioning Angular Mobile App.. This article demonstrates how to use JQuery Plugins in an Angular Mobile App. For the main GUI in our Angular Mobile App I decided to use an amazing JavaScript canvas plugin by Graham Breach which I made some changes to for this project. &nbsp;For scrolling I used the JQuery plugin iScroll v4.2 by Matteo Spinelli. If you are tired of the same, boring look and feel of most mobile apps, then checkout my approach, which doesn't have any Ionic, or any of the third-party components listed above.</p>
+<p>Frameworks like React Native and Ionic are completelty unnecessary and only add unwanted size and maintenence with each new release. I am an expert in every Mobile Framework like React Native, Ionic, Cordova, PhoneGap, etc. and I have written over hundreds of app in these frameworks like React Native for Clients who were misinformed into thinking that they wanted a "uniform look and approach to coding" which isn't the case with any of these old and unnecessary frameworks.</p>
+ 
+<p>I believe in eleminating as many 3rd-party components as possible and I have always liked the look and feel of JQuery Mobile and wanted to see how JQuery Mobile's styling would look in an Angular Mobile App where we let Angular control the DOM but take advantage of JQuery Mobile's cool Plugins and styling. You can easily ass Cordova or PhoneGap to this project. All the frameworks listed above like Ionic, etc. <strong>are all great frameworks </strong>that I have used for our clients BUT they are <strong>NOT </strong>needed to build a really cool, fully-functioning Angular Mobile App.. This article demonstrates how to use JQuery Plugins in an Angular Mobile App. For the main GUI in our Angular Mobile App I decided to use an amazing JavaScript canvas plugin by Graham Breach which I made some changes to for this project. &nbsp;For scrolling I used the JQuery plugin iScroll v4.2 by Matteo Spinelli. If you are tired of the same, boring look and feel of most mobile apps, then checkout my approach, which doesn't have any Ionic, or any of the third-party components listed above.</p>
 
 <p>To run the compiled code to see what the Angular Mobile App looks like just open the www.zip folder in Visual Studio as a website and you can see what the app looks like. Later, after you have created the project you can run it from Node.js. If you just want to see the working app I posted the compiled .apk file for Android on my website and you can just scan the QR Cod below to load swipeclouds.apk on your Android mobile phone.</p>
 
@@ -73,14 +75,11 @@
 	<li><strong>User Data Scrapper & Targeted Niche TV Commercials Delivery</strong>&nbsp;(Full JavaScript &amp; Java & Swift Code)</li>
 </ul>
 
-<p>Creating powerful Angular Mobile Apps is fast and easy. You just run Angular CLI and then unzip the src.zip file above and copy the contents into the "src" directory created by the CLI and you have all the features above ready to go with full source code---WOW! If you would like to download the compiled Android apk file you can find that on my SwipeClouds website at: <a href="http://www.swipeclouds.com/" target="_blank">http://www.swipeclouds.com</a></p>
+<p>Creating powerful Angular Mobile Apps is fast and easy. You just run Angular-CLI and then unzip the src.zip file above and copy the contents into the "src" directory created by the CLI and you have all the features above ready to go with full source code---WOW! If you would like to download the compiled Android apk file you can find that on my SwipeClouds website at: <a href="http://www.swipeclouds.com/" target="_blank">http://www.swipeclouds.com</a></p>
 
 ## Main GUI - Pinch to Size Cloud ##
 
 <p>The main GUI is a SwipeCloud of floating images and you can swirl this cloud by swiping any of the images with your finger. Pinching the SwipeCloud with your fingers will increase and decrease the size of the SwipeCloud. This SwipeCloud is the main means of navigation for the Angular Mobile App and clicking on any of the images in the SwipeCloud will load a different view, which, in most cases will load the VideoComponent View for that particular group of video feeds from any tube server that allows embedding.</p>
-
-<img height="384px" src="http://www.swipeclouds.com/img/pinch.gif" width="200px" />
-
 
 Angular Mobile App with a Very Different Look &amp; Feel<br>
 with A Novel Approach to Navigation. JQuery has a lot of<br>
@@ -139,11 +138,11 @@ npm config set registry "http://registry.npmjs.org"
 npm config set strict-ssl false
 </pre>
 
-<h2><strong>Angular CLI</strong></h2>
+<h2><strong>Angular-CLI</strong></h2>
 
-<p>I like the speed of development with Angular CLI but I dislike how buggy it is to work with at this time. I really dislike companies like Google telling me what my app should look like or what IDE I should use. The purpose of this article is to walk beginners through creating an Angular App using CLI so let's start.</p>
+<p>I like the speed of development with Angular-CLI but I dislike how buggy it is to work with at this time. I really dislike companies like Google telling me what my app should look like or what IDE I should use. The purpose of this article is to walk beginners through creating an Angular App using CLI so let's start.</p>
 
-<p>Install Angular CLI which will also install Angular's "ng" command globally on your system:</p>
+<p>Install Angular-CLI which will also install Angular's "ng" command globally on your system:</p>
 
 <p>Directions for installing Angular-CLI are at: <a href="https://github.com/angular/angular-cli#updating-angular-cli">https://github.com/angular/angular-cli#updating-angular-cli</a></p>
 
