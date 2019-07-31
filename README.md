@@ -7,7 +7,7 @@
 ## by William SerGio ##
 
 <p>You can download all the source code at:</p>
-http://www.codeproject.com/script/Articles/MemberArticles.aspx?amid=53972
+<p>http://www.codeproject.com/script/Articles/MemberArticles.aspx?amid=53972</p>
 
 <img height="520px" src="/mobile-drawing-app/src/assets/swipeclouds.gif" width="264px" />
 
